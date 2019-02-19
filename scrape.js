@@ -37,7 +37,5 @@ const puppeteer = require('puppeteer');
         return pageResult;
     }, lastPage);
 
-    console.log(okay);
-
     await browser.close();
 })();
