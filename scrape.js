@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const util = require("util");
+const fixPage = 10;
 
 (async () => {
     const browser = await puppeteer.launch();
@@ -18,7 +20,7 @@ const fs = require('fs');
     console.log("Last Page is", lastPageNumber); //lets stop it and see what we get
 
     const pagesResult = {};
-    for (let i = 1; i <= lastPageNumber; i++) { //wtf man, didnt assign i lol, verty true, good catch
+    for (let i = 1; i <= fixPage; i++) { 
         //do this for each page...
         await page.goto(`https://issuetracker.unity3d.com/?page=${i}`);
         console.log("i am on page ", i);
@@ -46,9 +48,5 @@ const fs = require('fs');
         })
         pagesResult[i] = result; //naming stuff is hard
     }
-    fs.writeFileSync("data.json", JSON.stringify(pagesResult));
-
-    //should have 3, result[1], result[2], result[3], make sense?
-    await browser.close();
+    return util.promisify(fs.writeFile)("./public/data.json", JSON.stringify(pagesResult)).finally(() => browser.close());
 })();
- //lets write it to a text file 
