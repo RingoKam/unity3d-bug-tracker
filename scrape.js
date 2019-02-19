@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs');
 
 (async () => {
     const browser = await puppeteer.launch();
@@ -6,7 +7,7 @@ const puppeteer = require('puppeteer');
     await page.goto('https://issuetracker.unity3d.com/');
     page.on('console', msg => console.log('PAGE LOG:', msg.text()));
 
-    const lastPage = await page.evaluate(() => {
+    const lastPageNumber = await page.evaluate(() => {
         const lastPageSpace = -2;
         const count = document.querySelector(".paging-wrapper .pagination").childElementCount;
         const lastPage = count + lastPageSpace;
@@ -14,28 +15,40 @@ const puppeteer = require('puppeteer');
         return lastPageNum;
     });
 
-    console.log("Last Page is", lastPage);
+    console.log("Last Page is", lastPageNumber); //lets stop it and see what we get
 
-    let result = await page.evaluate((lastPage) => {
-        const issueList = document.querySelectorAll(".g12.nest.idea.rel");
-        const issueListCount = issueList.length;
-        var pageResult = Array(issueListCount).fill().map((d,i) => {
-            const issue = issueList[i];
-            let r = {
-                status: issue.querySelector(".status").textContent, //status
-                count: issue.querySelector(".count").textContent, //count 
-                title: issue.querySelector(".cn.tdn").text, //title
-                url: issue.querySelector(".cn.tdn").href, //url
-                category: issue.querySelector("p:nth-child(1) > span > a").text, // category
-                date: issue.querySelector("p:nth-child(3)").textContent,  //date
-                version: issue.querySelector("p:nth-child(5)").textContent, //version 
-                detail: issue.querySelector(".bulk.mb0.clear").textContent, //detai
-            };
-            console.log(JSON.stringify(r));
-            return r;
+    const pagesResult = {};
+    for (let i = 1; i <= lastPageNumber; i++) { //wtf man, didnt assign i lol, verty true, good catch
+        //do this for each page...
+        await page.goto(`https://issuetracker.unity3d.com/?page=${i}`);
+        console.log("i am on page ", i);
+        let result = await page.evaluate(() => {
+            const issueList = document.querySelectorAll(".g12.nest.idea.rel");
+            const issueListCount = issueList.length;
+            const pResult = Array(issueListCount).fill().map((d, i) => {
+                const issue = issueList[i];
+                //hmmmm, what do you think 
+                let r = {
+                    status: issue.querySelector(".status").textContent, //status
+                    count: issue.querySelector(".count").textContent, //count 
+                    title: issue.querySelector(".cn.tdn").text, //title
+                    url: issue.querySelector(".cn.tdn").href, //url
+                    category: issue.querySelector("p:nth-child(1) > span > a").text, // category
+                    date: issue.querySelector("p:nth-child(3)").textContent,  //date
+                    version: issue.querySelector("p:nth-child(5)").textContent, //version 
+                    detail: issue.querySelector(".bulk.mb0.clear").textContent, //detai
+                };
+                return r;
+            })
+            //this is declaring a key value pair, with i as key, and our loop result as value
+            console.log(pResult);
+            return pResult; //naming stuff is hard
         })
-        return pageResult;
-    }, lastPage);
+        pagesResult[i] = result; //naming stuff is hard
+    }
+    fs.writeFileSync("data.json", JSON.stringify(pagesResult));
 
+    //should have 3, result[1], result[2], result[3], make sense?
     await browser.close();
 })();
+ //lets write it to a text file 
