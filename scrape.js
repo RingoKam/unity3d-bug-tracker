@@ -19,7 +19,7 @@ const tabSize = 10;
 
     console.log("Last Page is", lastPageNumber); //lets stop it and see what we get
 
-    const group = Math.ceil(parseInt(100) / tabSize);
+    const group = Math.ceil(parseInt(lastPageNumber) / tabSize);
 
     for (let i = 0; i <= group; i++) {
         const tasks = Array(group).fill().map(async (d, ii) => {
