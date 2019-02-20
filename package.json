@@ -8,20 +8,23 @@
     "@types/react": "^16.8.3",
     "@types/react-dom": "^16.8.2",
     "axios": "^0.18.0",
+    "lodash": "^4.17.11",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "typescript": "^3.3.3"
   },
   "devDependencies": {
-    "react-scripts": "2.1.5",
-    "puppeteer": "^1.12.2"
+    "nodemon": "^1.18.10",
+    "puppeteer": "^1.12.2",
+    "react-scripts": "2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "scrape": "node scrape"
+    "scrape": "node scrape",
+    "scrape:debug": "nodemon --inspect scrape.js"
   },
   "eslintConfig": {
     "extends": "react-app"
