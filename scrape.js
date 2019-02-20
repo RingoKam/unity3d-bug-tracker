@@ -22,7 +22,7 @@ const tabSize = 10;
     const group = Math.ceil(parseInt(lastPageNumber) / tabSize);
 
     for (let i = 0; i <= group; i++) {
-        const tasks = Array(group).fill().map(async (d, ii) => {
+        const tasks = Array(tabSize).fill().map(async (d, ii) => {
             const pageNumber = (i * tabSize) + ii + 1;
             if (pageNumber > lastPageNumber) {
                 return;
