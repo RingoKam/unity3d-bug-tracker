@@ -56,7 +56,7 @@ const tabSize = 10;
         });
         const taskResults = await Promise.all(tasks);
         const flattenedTaskResults = _.flatten(taskResults);
-        fs.writeFile(`./public/data${i}.json`, JSON.stringify(flattenedTaskResults), () => {
+        fs.writeFile(`./data/data${i}.json`, JSON.stringify(flattenedTaskResults), () => {
             console.info(`data${i} written!`);
         });
     }

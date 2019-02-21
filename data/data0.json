@@ -1,0 +1,1002 @@
+[
+    {
+        "status": "Duplicate",
+        "count": "28",
+        "title": "[LWRP] Directional Light Culling Masks don't work properly",
+        "url": "https://issuetracker.unity3d.com/issues/lwrp-directional-light-culling-masks-dont-work-properly",
+        "category": "Graphics - General",
+        "date": "Jul 10, 2018",
+        "version": "Version: ",
+        "detail": "SRP Repo: Issue #1019\n\nIn LWRP: If you make a scene with objects set to two different layers and then make two directional lights se... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "29",
+        "title": "Setting RectTransform sizeDelta after setting position will corrupt posi...",
+        "url": "https://issuetracker.unity3d.com/issues/setting-recttransform-sizedelta-after-setting-position-will-corrupt-position",
+        "category": "UI",
+        "date": "Mar 29, 2018",
+        "version": "Version: 2017.3.1p1",
+        "detail": "Repro steps:\nOpen attachecd project and run the RectTransform scene\nPress space to switch between setting SizeDelta before and after... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "51",
+        "title": "Prefab's references are lost when modifying prefab",
+        "url": "https://issuetracker.unity3d.com/issues/prefabs-references-are-lost-when-modifying-prefab",
+        "category": "Scene Management",
+        "date": "Jan 11, 2019",
+        "version": "Version: 2018.3.0f2",
+        "detail": "How to reproduce:\n1. Open attached \"PrefabReferenceLostRepro.zip\" project\n2. Go to Assets -> Scenes and open 'SampleScene'\n3. Click ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "51",
+        "title": "[iOS] Player crashes at ShouldUpdateTransformBefore when instantiating G...",
+        "url": "https://issuetracker.unity3d.com/issues/ios-player-crashes-at-shouldupdatetransformbefore-when-instantiating-gameobjects-into-a-scrollrect",
+        "category": "Mobile",
+        "date": "Jan 10, 2018",
+        "version": "Version: 2017.2.1f1",
+        "detail": "To reproduce:\n1. Open project attached by the user\n2. Build it for iOS platform (with \"Main\" scene attached)\n3. Run the application\n... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "15",
+        "title": "Coroutine can't be stopped via StopCoroutine() if it has 3 or more neste...",
+        "url": "https://issuetracker.unity3d.com/issues/coroutine-cant-be-stopped-via-stopcoroutine-if-it-has-3-or-more-nested-yield-return-coroutines",
+        "category": "Scripting",
+        "date": "Oct 10, 2018",
+        "version": "Version: 2018.2.11f1",
+        "detail": "How to reproduce:\n1. Open user-submitted project (New Unity Project)\n2. Open the 'scene' scene\n3. Enter Play Mode\n\nExpected result: ... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "23",
+        "title": "[LWRP] Assigning Render Texture gives black Screen (only on build)",
+        "url": "https://issuetracker.unity3d.com/issues/lwrp-assigning-render-texture-gives-black-screen-only-on-build",
+        "category": "Graphics - General",
+        "date": "Jul 10, 2018",
+        "version": "Version: ",
+        "detail": "SRP Repo: Issue #1575\n\nWhat happened?\nGetting black screen / UI disappearing (only on build) when using render texture set on second... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "21",
+        "title": "Graphics.CopyTexture fails to copy textures into a Texture2DArray for ce...",
+        "url": "https://issuetracker.unity3d.com/issues/graphics-dot-copytexture-fails-to-copy-textures-into-a-texture2darray-for-certain-textureformats",
+        "category": "Graphics - General",
+        "date": "Oct 26, 2018",
+        "version": "Version: 2018.3.0b7",
+        "detail": "How to reproduce:\n1. Open user-submitted project (CopyTextureBug)\n2. Attach the script 'TextureArrayTest.cs' to the 'Main Camera'\n3.... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "29",
+        "title": "Android application crashes when native function returns null",
+        "url": "https://issuetracker.unity3d.com/issues/android-application-crashes-when-native-function-returns-null",
+        "category": "Mobile",
+        "date": "Jul 21, 2018",
+        "version": "Version: 2018.2.0f2",
+        "detail": "Calling Android native function that returns null through AndroidJavaObject.CallStatic<object> method crashes application\nSteps to r... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "25",
+        "title": "Input polling rates drastically decreases editor performance",
+        "url": "https://issuetracker.unity3d.com/issues/input-polling-rates-drastically-decreases-editor-performance",
+        "category": "Input",
+        "date": "Jan 15, 2019",
+        "version": "Version: 2018.3.0f1",
+        "detail": "Steps to reproduce:\n1. Download and open the attached project\n2. Move the mouse inside the scene view\n\nExpected result: little to no... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "52",
+        "title": "HoloLens jittering 3D model causing color separation possibly due to inc...",
+        "url": "https://issuetracker.unity3d.com/issues/hololens-jittering-3d-model-causing-color-separation-possibly-due-to-incorrect-stabilization-plane",
+        "category": "VR",
+        "date": "Dec 29, 2017",
+        "version": "Version: 2017.2.0p1",
+        "detail": "1. What happened\n\n3D models are jittering and much more unstable than before the 2017.2.0p1 release. The jittering causes extreme co... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "37",
+        "title": "Editor throws \"GetGfxDevice() should only be called from main thread\" er...",
+        "url": "https://issuetracker.unity3d.com/issues/editor-throws-getgfxdevice-should-only-be-called-from-main-thread-errors-and-eventually-crashes-when-in-play-mode",
+        "category": "Graphics - General",
+        "date": "Dec 16, 2018",
+        "version": "Version: 2018.3.0f2",
+        "detail": "How to reproduce:\n1. Open attached project \"Breeze\"\n2. Enter Play Mode\n3. Play the game for 2minutes\n------------\nObserve errors \"Ge... Read more"
+    },
+    {
+        "status": "Not Reproducible",
+        "count": "12",
+        "title": "\"Connection to the Update server failed\" error appears when trying to up...",
+        "url": "https://issuetracker.unity3d.com/issues/connection-to-the-update-server-failed-error-appears-when-trying-to-update-unity-editor-via-check-for-updates-in-the-main-menu",
+        "category": "Editor - Other",
+        "date": "Jun 28, 2018",
+        "version": "Version: 2017.4.3f1",
+        "detail": "To reproduce:\n1. Open new project;\n2. Go to Help > Check for updates\n\nActual result: In the opened window error appears: \"Connection... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "36",
+        "title": "Input buffering and responsiveness issue for Linux Standalone builds wit...",
+        "url": "https://issuetracker.unity3d.com/issues/input-buffering-and-responsiveness-issue-for-linux-standalone-builds-with-low-framerate",
+        "category": "Linux",
+        "date": "Jun 15, 2018",
+        "version": "Version: 2017.4.5f1",
+        "detail": "To reproduce:\n1) Open attached project and ThirdPersonCharacter scene\n2) Create new script\n3) In Start function, add \"Application.ta... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "14",
+        "title": "[Android] Blit Type \"Auto\" or \"Never\" causes Android to show black scene",
+        "url": "https://issuetracker.unity3d.com/issues/android-blit-type-auto-or-never-causes-android-to-show-black-scene",
+        "category": "Mobile",
+        "date": "Jun 24, 2018",
+        "version": "Version: 2018.2.0b9",
+        "detail": "To reproduce:\n\n1. Download attached project \"VRUnity2018-2b9.zip\" and open in Unity\n2. Open \"SampleScene\" scene\n3. Set Android platf... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "75",
+        "title": "[VR]EarlyUpdate.XRUpdate's CPU usage increases by about 2.4ms every 10mi...",
+        "url": "https://issuetracker.unity3d.com/issues/vr-earlyupdate-dot-xrupdates-cpu-usage-increases-by-about-2-dot-4ms-every-10minutes-if-the-unity-player-isnt-focused-on",
+        "category": "VR",
+        "date": "Dec 26, 2018",
+        "version": "Version: 2018.3.0f2",
+        "detail": "Steps to reproduce:\n\n1. Create a new project\n2. Enable VR\n3. Build for standalone with \"Development Build\" and \"Auto-Connect Profile... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "21",
+        "title": "Editor crashes when loading a mesh asset with 'Mesh Compression' from an...",
+        "url": "https://issuetracker.unity3d.com/issues/editor-crashes-when-loading-a-mesh-asset-with-mesh-compression-from-an-assetbundle",
+        "category": "Asset Bundles",
+        "date": "Jan 03, 2018",
+        "version": "Version: 2017.3.0p1",
+        "detail": "The crash happens if there's both an asset with 'Mesh Compression' enabled, and any other asset\n\nSteps to reproduce:\n1. Download and... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "224",
+        "title": "[VR] Particle Systems cause \"task.rasterData.indexBuffer == NULL\" error ...",
+        "url": "https://issuetracker.unity3d.com/issues/vr-particle-systems-cause-task-dot-rasterdata-dot-indexbuffer-equals-equals-null-error-and-lead-to-graphical-glitches",
+        "category": "VR",
+        "date": "Nov 09, 2018",
+        "version": "Version: 2018.3.0b9",
+        "detail": "Steps to reproduce:\n1. Create a new project\n2. Enable VR\n3. Create a particle system\n4. Enter playmode and put it in your HMDs view\n... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "14",
+        "title": "[Linux][Nvidia] Graphical corruption in many games with OpenGL",
+        "url": "https://issuetracker.unity3d.com/issues/linux-nvidia-graphical-corruption-in-many-games-possible-regression",
+        "category": "Graphics - General",
+        "date": "Dec 12, 2018",
+        "version": "Version: ",
+        "detail": "Note: This fix is being backported to 2018.3, likely to land in 2018.3.4f1\n\nIn a number of Unity games on Linux, running on OpenGL a... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "14",
+        "title": "[Regression] Colliders added at Runtime sometimes lose their functionality",
+        "url": "https://issuetracker.unity3d.com/issues/regression-colliders-added-at-runtime-sometimes-lose-their-functionality",
+        "category": "Physics",
+        "date": "Jun 19, 2018",
+        "version": "Version: 2018.1.5f1",
+        "detail": "How to reproduce:\n1. Open the user-submitted project\n2. Enter Play mode\n3. Walk forward using the \"W\" key and observe the results\n4.... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "13",
+        "title": "Unable to find a corresponding location while using Partial classes/meth...",
+        "url": "https://issuetracker.unity3d.com/issues/unable-to-find-a-corresponding-location-while-using-partial-classes-slash-methods-when-debugging",
+        "category": "Scripting",
+        "date": "Jan 18, 2019",
+        "version": "Version: 2018.3.0f2",
+        "detail": "Reproduction steps:\n\n1. Open \"Test Project.zip\" project and \"SampleScene\" scene\n2. Open \"TestClass.Partial\" in VS\n3. In Line 9 add a... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "11",
+        "title": "[Oculus] Black screen when resume from sleeping mode on Quest",
+        "url": "https://issuetracker.unity3d.com/issues/oculus-black-screen-when-resume-from-sleeping-mode-on-quest",
+        "category": "VR",
+        "date": "Jan 08, 2019",
+        "version": "Version: 2018.1.0b12",
+        "detail": "Repro steps:\n \n1. Build APK with 2018.3.x (I tested 2018.3.0f2+OVRPlugin 1.32, and 2018.3.0f1+OVRPlugin 1.31)\n2. Run it on Quest\n3. ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "41",
+        "title": "\"ArgumentException: Cannot set currency to an empty or null string\" erro...",
+        "url": "https://issuetracker.unity3d.com/issues/argumentexception-cannot-set-currency-to-an-empty-or-null-string-errors-using-iap-in-editor",
+        "category": "IAP",
+        "date": "May 04, 2018",
+        "version": "Version: 2018.1.0f2",
+        "detail": "To reproduce:\n1. Open users attached project \"BlockPuzzleMagic.zip\"\n2. Open \"MainScene.unity\" scene\n3. Press the shop button on the ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "21",
+        "title": "Turning off a child object in Canvas, applying changes to prefab, then t...",
+        "url": "https://issuetracker.unity3d.com/issues/turning-off-a-child-object-in-canvas-applying-changes-to-prefab-then-turning-on-again-breaks-its-layout",
+        "category": "UI",
+        "date": "Dec 12, 2017",
+        "version": "Version: 2017.3.0f2",
+        "detail": "This is happening only when an object with TextMeshPro components are used in the Canvas.\n\nSteps to reproduce:\n1. Open QA's attached... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "24",
+        "title": "Unity outputs a warning in a Windows 64bit Standalone Player when using ...",
+        "url": "https://issuetracker.unity3d.com/issues/unity-outputs-a-warning-in-a-windows-64bit-standalone-player-when-using-built-in-shaders",
+        "category": "Shaders",
+        "date": "Dec 08, 2018",
+        "version": "Version: 2018.3.0b11",
+        "detail": "To reproduce:\n1. Open attached project\n2. Build & Run a Windows 64bit Standalone Player\n3. Open player log file \"C:\\Users\\%UserName%... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "54",
+        "title": "[Regression] AssetBundleManager crashes editor in GetAllScenePathsFromAs...",
+        "url": "https://issuetracker.unity3d.com/issues/regression-assetbundlemanager-crashes-editor-in-getallscenepathsfromassetbundle",
+        "category": "Asset Bundles",
+        "date": "Mar 06, 2018",
+        "version": "Version: 2017.3.1p2",
+        "detail": "How to reproduce:\n1. Download attached project\n2. In Unity, under Tools/Configuration..., click on Generate with the default setting... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "38",
+        "title": "Gameobject Transforms are not being disabled when the Player is Stopped",
+        "url": "https://issuetracker.unity3d.com/issues/vuforia-gameobject-transforms-are-not-being-disabled-when-the-player-is-stopped",
+        "category": "Editor - Other",
+        "date": "Nov 14, 2017",
+        "version": "Version: 2017.3.0b9",
+        "detail": "Gameobject Transform component keeps on being detected post to Disable of the Game object.\n\nUsers are running into this without Vufo... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "13",
+        "title": "[Android][Gradle] Build fails when downloading files from jcenter",
+        "url": "https://issuetracker.unity3d.com/issues/gradle-build-fails-when-downloading-files-from-jcenter",
+        "category": "Mobile",
+        "date": "Oct 24, 2018",
+        "version": "Version: 2018.1.0a2",
+        "detail": "Steps to reproduce:\n1. Delete ',gradle' folder from %USERPROFILE% folder\n2. Create a new project\n3. Attempt to build an apk\n\nReprodu... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "58",
+        "title": "Sounds do not play in WebGL Builds when launched in Safari 12",
+        "url": "https://issuetracker.unity3d.com/issues/sounds-do-not-play-in-webgl-builds-when-launched-in-safari-12",
+        "category": "WebGL",
+        "date": "Oct 09, 2018",
+        "version": "Version: 2018.2.11f1",
+        "detail": "How to reproduce:\n1. Open the Project attached by the user (test.zip)\n2. Open the \"SampleScene\" Scene, play it, notice the sound\n3. ... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "18",
+        "title": "[Regression] Hitting 'Apply' on a prefab with cloth collider creates mul...",
+        "url": "https://issuetracker.unity3d.com/issues/regression-hitting-apply-on-a-prefab-with-cloth-collider-creates-multiple-mesh-collider-components",
+        "category": "Assets Management",
+        "date": "Dec 22, 2017",
+        "version": "Version: 2017.3.0f3",
+        "detail": "How to reproduce:\n1. Create new project file\n2. Add a new 3D GameObject in Hierarchy Window\n3. Add Cloth component \n4. Drag GameObje... Read more"
+    },
+    {
+        "status": "By Design",
+        "count": "141",
+        "title": "[Animation] Animator Transition does not get interrupted",
+        "url": "https://issuetracker.unity3d.com/issues/animation-animator-transition-does-not-get-interrupted",
+        "category": "Animation",
+        "date": "Feb 08, 2018",
+        "version": "Version: 2017.1.3p1",
+        "detail": "Steps to reproduce:\n1. Open user attached project\n2. Open scene_Crossfade.unity\n3. In the Cotroller.cs script, notice that at frame ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "27",
+        "title": "Oculus VR view is dark with Linear Color space and Single-Pass Rendering",
+        "url": "https://issuetracker.unity3d.com/issues/oculus-vr-view-is-dark-with-linear-color-space-and-single-pass-rendering",
+        "category": "VR",
+        "date": "Mar 06, 2018",
+        "version": "Version: 2018.1.0b9",
+        "detail": "Steps to reproduce:\n1. Download and open the latest project(\"linvr.zip\")\n2. Enter Playmode with the Oculus headset\n3. Compare Game v... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "35",
+        "title": "[Enlighten] Errors appear in the console after cleaning GI Cache and rel...",
+        "url": "https://issuetracker.unity3d.com/issues/errors-appear-in-the-console-after-cleaning-gi-cache-and-reloading-project",
+        "category": "Global Illumination",
+        "date": "Dec 21, 2017",
+        "version": "Version: 2017.2.1f1",
+        "detail": "Reproduction steps:\n1. Download project \"GIBug.zip\" and open in Unity\n2. Edit > Preferences > GI Cache > Clean Cache\n3. Close and re... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "91",
+        "title": "Navigating between input fields with Tab does not enable opportunity to ...",
+        "url": "https://issuetracker.unity3d.com/issues/navigating-between-input-fields-with-tab-does-not-enable-opportunity-to-insert-the-value",
+        "category": "Inspector Functionality",
+        "date": "Sep 21, 2017",
+        "version": "Version: 2017.1.1p3",
+        "detail": "Steps to reproduce:\n\n1) Open Unity and create a new project\n2) Add an empty gameObject in the Hierarchy window\n3) In the Inspector w... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "22",
+        "title": "[Il2CPP][.Net 4.x] Crash in \"il2cpp::utils::Debugger::InitializeTypeSour...",
+        "url": "https://issuetracker.unity3d.com/issues/il2cpp-dot-net-4-dot-x-crash-in-il2cpp-utils-debugger-initializetypesourcefilemap-at-startup",
+        "category": "IL2CPP",
+        "date": "Jun 20, 2018",
+        "version": "Version: 2018.2.0b8",
+        "detail": "Reproduction steps:\n1. Open the project from the attached 'drive.google.com' link.\n2. Go to \"File > Build Settings\" and remove an em... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "30",
+        "title": "Vive Tracker causes an error and does not report input",
+        "url": "https://issuetracker.unity3d.com/issues/vive-tracker-causes-an-error-and-does-not-report-input",
+        "category": "VR",
+        "date": "Aug 01, 2018",
+        "version": "Version: ",
+        "detail": "Steps to Reproduce:\n- Connect a Vive tracker to SteamVR\n- Open the attached project\n- enter playmode\n\nMinimum reproduction\n- Connect... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "13",
+        "title": "Project failing to Build with Baked Lighting across multiple Additive Sc...",
+        "url": "https://issuetracker.unity3d.com/issues/project-failing-to-build-with-baked-lighting-across-multiple-additive-scenes-on-a-different-computer",
+        "category": "Deployment Management",
+        "date": "Dec 22, 2017",
+        "version": "Version: 2017.2.0p3",
+        "detail": "To reproduce:\n\n1. Download attached project \"LightingDataAssetBugRepro.zip\" and open in Unity\n2. Open \"23_LightingRepro\" scene\n3. Bu... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "23",
+        "title": "ScriptableRuntimeReflection allocates 17 Bytes of GC per frame",
+        "url": "https://issuetracker.unity3d.com/issues/scriptableruntimereflection-allocates-17-bytes-of-gc-per-frame",
+        "category": "Mono",
+        "date": "Nov 02, 2018",
+        "version": "Version: 2018.3.0b8",
+        "detail": "Steps to reproduce:\n1. Create a new project\n2. Open the profiler window\n3. Enter Playmode\n\nExpected result: no GC allocation from Sc... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "22",
+        "title": "[LWRP]LWRP + SPS + Render Texture causes Editor to crash or Editor GUI t...",
+        "url": "https://issuetracker.unity3d.com/issues/lwrp-lwrp-plus-sps-plus-render-texture-causes-editor-to-crash-or-editor-gui-to-disappear",
+        "category": "VR",
+        "date": "May 05, 2018",
+        "version": "Version: 2018.1.0f2",
+        "detail": "Steps to reproduce:\n1. Create a new project with LWRP VR template\n2. Create a camera that renders to a render texture\n3. Enter Playm... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "34",
+        "title": "UnityWebRequest GetResponseHeaders method returns null on Android devices",
+        "url": "https://issuetracker.unity3d.com/issues/unitywebrequest-getresponseheaders-method-returns-null-on-android-devices",
+        "category": "WebRequest",
+        "date": "Oct 05, 2017",
+        "version": "Version: 5.6.3p4",
+        "detail": "Reproduction steps:\n1) Download and open user's attached project\n2) Build and run test.unity scene on an Android device\n3) Observe l... Read more"
+    },
+    {
+        "status": "Not Reproducible",
+        "count": "29",
+        "title": "HoloLens holograms warp and pivot despite correct setting of stabilisati...",
+        "url": "https://issuetracker.unity3d.com/issues/hololens-holograms-warp-and-pivot-despite-correct-setting-of-stabilisation-plane",
+        "category": "VR",
+        "date": "Mar 14, 2018",
+        "version": "Version: 2018.1.0b10",
+        "detail": "How to reproduce:\n1. Open the attached project\n2. Switch platform to UWP\n3. Build and Deploy to HoloLens\n4. Once the app is running ... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "17",
+        "title": "[SRP] ARBackgroundRenderer support",
+        "url": "https://issuetracker.unity3d.com/issues/srp-arbackgroundrenderer-support",
+        "category": "Graphics - General",
+        "date": "Jul 11, 2018",
+        "version": "Version: ",
+        "detail": "SRP Repo: Issue #1033\n\n\nARBackgroundRenderer relies on command buffers to fill the screen with a material before opaque rendering.\n\n... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "47",
+        "title": "\"Cancelling DisplayDialog..\" error is being thrown when entering the pla...",
+        "url": "https://issuetracker.unity3d.com/issues/cancelling-displaydialog-dot-error-is-being-thrown-when-entering-the-play-mode-after-assetbundle-dot-unload-false",
+        "category": "Asset Bundles",
+        "date": "Mar 15, 2018",
+        "version": "Version: 2017.3.0f3",
+        "detail": "To reproduce: \n1. Open user's attached project\n2. Switch platform to iOS or PC\n3. In the menu bar press Project -> AssetBundle\n4. En... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "36",
+        "title": "Game object transform.position is incorrect after Object.Instantiate aft...",
+        "url": "https://issuetracker.unity3d.com/issues/game-object-transform-dot-position-is-incorrect-after-object-dot-instantiate-after-awake-function-call",
+        "category": "Scene Management",
+        "date": "Sep 22, 2017",
+        "version": "Version: 5.6.3p3",
+        "detail": "How to reproduce:\n1. Download attached project files and open \"test\" Scene\n2. Enter Play mode. Notice now the world-space location i... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "12",
+        "title": "[Linux] keystrokes recorded twice ",
+        "url": "https://issuetracker.unity3d.com/issues/linux-keystrokes-recorded-twice",
+        "category": "Linux",
+        "date": "Jan 12, 2018",
+        "version": "Version: 2017.3.0f3",
+        "detail": "-e: when typing into input fields each letter is recorded twice for each key stroke\n--works well in 2017.1.2p4., 2017.2.1p1, stops w... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "31",
+        "title": "[Regression] [Win] Videos are dark when using Linear color space",
+        "url": "https://issuetracker.unity3d.com/issues/regression-videos-are-dark-when-using-linear-color-space",
+        "category": "Graphics - General",
+        "date": "Oct 24, 2017",
+        "version": "Version: 2017.2.0f2",
+        "detail": "How to reproduce:\n1. Download attached project file and open \"1\" Scene\n2. Enter Play Mode (make sure Linear color space is selected ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "27",
+        "title": "\"Assertion failed: Failed to insert item\" error is thrown when scripts c...",
+        "url": "https://issuetracker.unity3d.com/issues/assertion-failed-failed-to-insert-item-error-is-thrown-when-scripts-count-exceed-the-limit-of-1167-scripts",
+        "category": "Editor - Other",
+        "date": "May 18, 2018",
+        "version": "Version: 2017.4.3f1",
+        "detail": "How to reproduce:\n1. Open given Unity project\n2. Observe Assertion failed errors\n3. Go to Component -> Scripts\n4. Notice that not al... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "24",
+        "title": "<rdar://problem/43248387> [iOS 12] Xcode reports ~4 times higher memory ...",
+        "url": "https://issuetracker.unity3d.com/issues/ios-12-xcode-reports-~4-times-higher-memory-usage-on-ios-12-compared-to-ios-11",
+        "category": "Mobile",
+        "date": "Jun 21, 2018",
+        "version": "Version: 2017.4.6f1",
+        "detail": "To reproduce:\n1. Create an empty project or use QA attached one\n2. Build it for iOS\n3. Run on the device with iOS 12\n4. Open Debug n... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "16",
+        "title": "[Editor] Typing in Project window Search bar during Play mode causes Nul...",
+        "url": "https://issuetracker.unity3d.com/issues/editor-typing-in-project-window-search-bar-during-play-mode-causes-nullreference-exceptions",
+        "category": "Editor - Other",
+        "date": "Sep 03, 2018",
+        "version": "Version: 2017.4.10f1",
+        "detail": "To reproduce:\n\n1. Download attached project \"Bug Test.zip\" and open in Unity\n2. Open \"test\" scene\n3. Type anything in the Project wi... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "23",
+        "title": "[XR] \"Unsupported texture format ...\" error is displayed in the Editor",
+        "url": "https://issuetracker.unity3d.com/issues/xr-unsupported-texture-format-dot-dot-dot-error-is-displayed-in-the-editor",
+        "category": "VR",
+        "date": "Oct 05, 2017",
+        "version": "Version: ",
+        "detail": " Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "19",
+        "title": "[iOS] Application crashes at LzmaDec_DecodeReal when trying to stop down...",
+        "url": "https://issuetracker.unity3d.com/issues/ios-application-crashes-at-lzmadec-decodereal-when-trying-to-stop-downloads-and-begin-new-via-www",
+        "category": "Mobile",
+        "date": "Dec 06, 2017",
+        "version": "Version: 5.5.5f1",
+        "detail": "To reproduce:\n1. Open project attached by the user\n2. Build and run it on iOS device\n3. Clear cache (use \"Delete cache\" button)\n4. H... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "20",
+        "title": "Realtime Lights in VR do not render properly in Stereo",
+        "url": "https://issuetracker.unity3d.com/issues/realtime-lights-in-vr-do-not-render-properly-in-the-right-eye-with-single-pass-instanced-turned-on",
+        "category": "VR",
+        "date": "Oct 15, 2017",
+        "version": "Version: 2017.2.0f3",
+        "detail": "Steps to reproduce:\n\n1. Download and open the attached project\n2. Enter Playmode\n\nExpected result: Light is visible on a plane in bo... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "76",
+        "title": "[Android] VideoPlayer stuttering and dropping frames",
+        "url": "https://issuetracker.unity3d.com/issues/android-videoplayer-stuttering-and-dropping-frames",
+        "category": "Video",
+        "date": "Jul 14, 2017",
+        "version": "Version: 5.6.2f1",
+        "detail": "How to reproduce:\n1. Open stripped project from OC\n2. Deploy app to device\n3. Click 'Breathing'\n4. Click 'What are the benefits?'\n5.... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "16",
+        "title": "GameView's Scale lower limit depends on the Windows Scale setting with H...",
+        "url": "https://issuetracker.unity3d.com/issues/gameview-defaults-to-1-dot-25x-scale-on-windows",
+        "category": "Scene/Game View",
+        "date": "Nov 09, 2018",
+        "version": "Version: ",
+        "detail": "To reproduce:\n1. Use a high DPI monitor (anything above 1080p should work)\n2. Open any project or create a new one\n3. Drag the Game ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "41",
+        "title": "Loading an asset that has an Animator component from an Asset Bundle wit...",
+        "url": "https://issuetracker.unity3d.com/issues/loading-an-asset-that-has-an-animator-component-from-an-asset-bundle-with-loadasync-throws-assertion-failed-error",
+        "category": "Asset Bundles",
+        "date": "Aug 19, 2017",
+        "version": "Version: 2017.2.0b7",
+        "detail": "The project provided uses \"Asset Bundle Browser\" tool but  it has anything to do with the bug\n\nTo reproduce:\n1) Open the attached pr... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "73",
+        "title": "[Xcode 9][iOS] Warning \"Missing Marketing Icon\" is thrown when uploading...",
+        "url": "https://issuetracker.unity3d.com/issues/xcode-9-ios-warning-missing-marketing-icon-is-thrown-when-uploading-an-app-to-itunes-connect",
+        "category": "Mobile",
+        "date": "Jun 29, 2017",
+        "version": "Version: 5.6.1p1",
+        "detail": "Steps to reproduce:\n1. Create an empty project\n2. Build to iOS & open in Xcode\n3. Set up the project for uploading to iTunes Connect... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "24",
+        "title": "Assertion failed on expression: '(srcData.GetChannelMask() & copyChannel...",
+        "url": "https://issuetracker.unity3d.com/issues/assertion-failed-on-expression-srcdata-dot-getchannelmask-and-copychannels-equals-equals-copychannels-after-exiting-the-play-mode",
+        "category": "Editor - Other",
+        "date": "May 15, 2018",
+        "version": "Version: 2018.1.0b10",
+        "detail": "To reproduce:\n\n1. Open the project, attached by the user (castlePrototype.zip)\n2. Open the \"Map\" scene\n3. Enter and exit Play mode\n4... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "15",
+        "title": "[WebGl][Tilemap] Tilemap.SetTile does not set the tile on WebGl build",
+        "url": "https://issuetracker.unity3d.com/issues/webgl-tilemap-tilemap-dot-settile-does-not-set-the-tile-on-webgl-build",
+        "category": "WebGL",
+        "date": "Nov 04, 2017",
+        "version": "Version: 2017.2.0f3",
+        "detail": "Steps to reproduce:\n1. Open user attached project\n2. Play the scene notice that the tile generated by code appears\n3. Make a WebGL b... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "147",
+        "title": "\"Assertion failed: TLS Allocator ALLOC_TEMP_THREAD...\" error is shown af...",
+        "url": "https://issuetracker.unity3d.com/issues/assertion-failed-tls-allocator-alloc-temp-thread-dot-dot-dot-error-is-shown-after-building-the-project-for-ios",
+        "category": "Editor - Other",
+        "date": "Jun 17, 2017",
+        "version": "Version: 2017.1.0b8",
+        "detail": "To reproduce:\n\n1. Create a new project\n2. Build it for iOS\n3. Observe the console after the build has finished\n\nExpected: no asserti... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "34",
+        "title": "[iOS] Rigidbody interpolation causes objects to jitter",
+        "url": "https://issuetracker.unity3d.com/issues/ios-rigidbody-interpolation-causes-objects-to-jitter",
+        "category": "iOS",
+        "date": "Nov 21, 2017",
+        "version": "Version: 2017.2.0p2",
+        "detail": "Steps to reproduce:\n1. Download the user's attached project\n2. Build to iOS\n3. Observe the cube travelling in the screen\n\nExpected: ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "14",
+        "title": "Scene gets dirtied after pressing play (it may be related to layout groups",
+        "url": "https://issuetracker.unity3d.com/issues/scene-gets-dirtied-after-pressing-play-it-may-be-related-to-layout-groups",
+        "category": "UI",
+        "date": "Nov 06, 2017",
+        "version": "Version: 2017.3.0b8",
+        "detail": "Note: it may be the same case as: https://fogbugz.unity3d.com/f/cases/910444/ , fixed in 2017.2.0f1 , but it somehow regressed...\n\nR... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "19",
+        "title": "[Android] Crash on builds with .NET 4.6 scripting runtime selected when ...",
+        "url": "https://issuetracker.unity3d.com/issues/android-crash-on-builds-with-net-4-dot-6-scripting-runtime-selected-when-null-reference-exception-appears",
+        "category": "Mono",
+        "date": "Sep 27, 2017",
+        "version": "Version: 2017.1.1f1",
+        "detail": "To reproduce:\n\n1. Download and open attached \"Android_Net46_Bug.zip\" project.\n2. Build and run for android device.\n\nExpected result:... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "44",
+        "title": "Crash in Transform::GetSiblingIndex when deleting child GameObject of Pr...",
+        "url": "https://issuetracker.unity3d.com/issues/crash-in-transform-getsiblingindex-when-deleting-child-gameobject-of-prefabs-instance-and-applying-changes-to-original-prefab",
+        "category": "Scene Management",
+        "date": "Jul 13, 2017",
+        "version": "Version: 2017.2.0b2",
+        "detail": "How to reproduce:\n1. Open the attached \"PrefabCrash\" project \n2. Drag and drop \"Options\" Prefab to Hierarchy\n3. Expand \"Options\" Pre... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "24",
+        "title": "[2018.2] [iOS] [Vuforia] Crash in  Thread 1: EXC_BAD_ACCESS (code=1, add...",
+        "url": "https://issuetracker.unity3d.com/issues/2018-dot-2-ios-vuforia-crash-in-thread-1-exc-bad-access-code-equals-1-address-equals-0x90000000115ecd67-on-device-orientation-change",
+        "category": "iOS",
+        "date": "Apr 26, 2018",
+        "version": "Version: 2018.2.0b1",
+        "detail": "To reproduce:\n1. Open project\n2. Add AR camera to the scene\n3. Build and run on iOS\n4. Change device rotation\n\nExpected: the camera ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "27",
+        "title": "Projects built with .NET 4.6, DateTime.Now always returns current UTC ti...",
+        "url": "https://issuetracker.unity3d.com/issues/projects-built-with-net-4-dot-6-datetime-dot-now-always-returns-current-utc-time-regardless-of-your-current-local-time",
+        "category": "Scripting",
+        "date": "Aug 17, 2017",
+        "version": "Version: 2017.1.0f3",
+        "detail": "Reproduction steps:\n1) Download and open TimeTest.zip project\n2) Build and run \"TimeTest1.unity\" scene on an Android device\n-- Notic... Read more"
+    },
+    {
+        "status": "Won't Fix",
+        "count": "14",
+        "title": "Kinematic Rigidbody does not respect Adaptive Force setting",
+        "url": "https://issuetracker.unity3d.com/issues/kinematic-rigidbody-does-not-respect-adaptive-force-setting",
+        "category": "Physics",
+        "date": "Nov 09, 2017",
+        "version": "Version: 2017.2.0f3",
+        "detail": "How to reproduce:\n\n1. Open attached project\n2. Open scene PhysicsTestScene.unity\n3. Play the scene\n - Note the left structure does n... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "27",
+        "title": "[Metal] Performance degradation on iOS devices",
+        "url": "https://issuetracker.unity3d.com/issues/metal-performance-degradation-on-ios-devices",
+        "category": "Metal",
+        "date": "Jul 27, 2018",
+        "version": "Version: 2018.3.0a6",
+        "detail": "To reproduce: \n1. Open the GraphicsPerf project with Unity 2018.2;\n2. Change Graphics API to Metal;\n3. Build and run DynamicVBO, Lig... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "49",
+        "title": "[UIProfiler]Time ms increases for Profiler.FinalizeAndSendFrame when the...",
+        "url": "https://issuetracker.unity3d.com/issues/time-ms-increases-for-profiler-dot-finalizeandsendframe-each-time-the-profiler-is-closed-and-opened",
+        "category": "UI",
+        "date": "Jun 23, 2017",
+        "version": "Version: 2017.1.0b10",
+        "detail": "To reproduce:\n\n1. Create a new project\n2. Add many different UI game objects\n3. Enter Play mode\n4. Open Profiler\n5. Wait for a few m... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "31",
+        "title": "Seeking backwards in VideoPlayer video takes considerably more time than...",
+        "url": "https://issuetracker.unity3d.com/issues/seeking-backwards-in-videoplayer-video-takes-considerably-more-time-than-seeking-forwards",
+        "category": "Video",
+        "date": "Sep 11, 2017",
+        "version": "Version: 2017.1.0p4",
+        "detail": "Steps to reproduce:\n1. Open user attached project \"VideoPerformance.zip\"\n2. Build for android device\n3. Press \"High profile\" video\n4... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "18",
+        "title": "Asset refresh times are approximately 5 times longer in Unity 2017.2.0a2...",
+        "url": "https://issuetracker.unity3d.com/issues/asset-refresh-times-are-approximately-5-times-longer-in-unity-2017-dot-2-0a2-and-later-versions",
+        "category": "Scene Management",
+        "date": "Sep 19, 2017",
+        "version": "Version: 2017.2.0b11",
+        "detail": "How to reproduce:\n1. Open the attached \"SurvivalShooter\" project\n2. Perform a few Asset refreshes by pressing Ctrl + R (or CMD+R, if... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "131",
+        "title": "\"In order to call GetTransformInfoExpectUpToDate...\" error message appea...",
+        "url": "https://issuetracker.unity3d.com/issues/in-order-to-call-gettransforminfoexpectuptodate-dot-dot-dot-error-message-appears-while-toggling-skinned-mesh-renderer-component",
+        "category": "Graphics - General",
+        "date": "Apr 06, 2017",
+        "version": "Version: 5.6.0f3",
+        "detail": "How to reproduce:\n1.  Create a new project\n2.  Change \"Directional Light\" type from Directional to Spot, make sure that it's Shadow ... Read more"
+    },
+    {
+        "status": "Won't Fix",
+        "count": "21",
+        "title": "[macOS] Unity freezes and never exits when running Test Runner from Comm...",
+        "url": "https://issuetracker.unity3d.com/issues/macos-unity-freezes-and-never-exits-when-running-test-runner-from-command-line",
+        "category": "Unity Test Runner",
+        "date": "Oct 13, 2017",
+        "version": "Version: 2017.2.0f3",
+        "detail": "To reproduce: \n1. Open Terminal window\n2. Download user's project and unzip it\n3. Launch Test Runner by using this command:\n/(path t... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "15",
+        "title": "Building with Autoconnect Profiler enabled throws error that ShowProfile...",
+        "url": "https://issuetracker.unity3d.com/issues/building-with-autoconnect-profiler-enabled-throws-error-that-showprofilerwindow-could-not-be-called",
+        "category": "Build Pipeline",
+        "date": "Jul 12, 2018",
+        "version": "Version: 2018.3.0a5",
+        "detail": "Steps to reproduce:\n\n1. Create a new project\n2. Enable Development build and Autoconnect Profiler\n3. Build and Run\nNotice error in c... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "80",
+        "title": "Android builds fail with Java 9 JDK and Unable to list target platforms ...",
+        "url": "https://issuetracker.unity3d.com/issues/android-builds-fail-with-java-9-jdk-and-unable-to-list-target-platforms-error",
+        "category": "Android",
+        "date": "Oct 04, 2017",
+        "version": "Version: ",
+        "detail": "With the latest public versions of Unity (2017.1.1f1), Android Studio/SDK tools(26.0.2), and JDK (Java HotSpot(TM) 64-Bit Server VM ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "40",
+        "title": "Merge conflict in ProjectVersion.txt causes 'Unable to parse file' error...",
+        "url": "https://issuetracker.unity3d.com/issues/merge-conflict-in-projectversion-dot-txt-causes-unable-to-parse-file-error-on-any-project-opened",
+        "category": "Editor - Other",
+        "date": "Feb 15, 2018",
+        "version": "Version: 2018.1.0b7",
+        "detail": "Steps to reproduce:\n1. Start a new project\n2. Open ProjectSettings/ProjectVersion.txt file of your newly created project\n3. Write an... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "18",
+        "title": "Unity Microphone does not work with Razer Kraken 7.1 Chroma headsets whi...",
+        "url": "https://issuetracker.unity3d.com/issues/unity-microphone-does-not-work-with-razer-kraken-7-dot-1-chroma-headsets-while-razer-synapse-is-installed",
+        "category": "Audio",
+        "date": "Aug 30, 2017",
+        "version": "Version: 2017.1.0p4",
+        "detail": "To reproduce:\n1) Have the Razer Synapse installed and the Razer Kraken 7.1 Chroma headset\n2) Open attached project and scene in it\n3... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "21",
+        "title": "[iOS][ReplayKit] Recording with ReplayKit fails on iOS 11 latest beta ",
+        "url": "https://issuetracker.unity3d.com/issues/ios-replaykit-recording-with-replaykit-fails-on-ios-11-latest-beta",
+        "category": "iOS",
+        "date": "Aug 10, 2017",
+        "version": "Version: 2017.1.0f3",
+        "detail": "Steps to reproduce:\n\n1. Open attached project\n2. Build 'Test' scene for iOS\n3. Run on a device with latest iOS 11 beta (15A5341f)\n4.... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "14",
+        "title": "Fatal Error referring RegisterRuntimeInitializeAndCleanup is thrown afte...",
+        "url": "https://issuetracker.unity3d.com/issues/fatal-error-referring-registerruntimeinitializeandcleanup-is-thrown-after-playing-a-scene-multiple-times-in-2017-dot-4",
+        "category": "VR",
+        "date": "Apr 12, 2018",
+        "version": "Version: 2017.4.1f1",
+        "detail": "Steps to reproduce:\n1. Open the attached project\n2. Switch platform to Windows Store\n3. Open the HeadsetAdjustment.unity scene\n4. Se... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "13",
+        "title": "Crash when selecting two cameras in the hierarchy when there is a Terrai...",
+        "url": "https://issuetracker.unity3d.com/issues/crash-when-selecting-two-cameras-in-the-hierarchy-when-there-is-a-terrain-object-in-the-scene",
+        "category": "Terrain",
+        "date": "Nov 07, 2018",
+        "version": "Version: 2018.3.0b8",
+        "detail": "How to reproduce:\n1. Download, extract and open the attached project (1098608_repro.zip)\n2. Open scene 'Game' (Assets -> Scenes)\n3. ... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "12",
+        "title": "[Oculus GO] PostProcessing effects are not applied to built applications",
+        "url": "https://issuetracker.unity3d.com/issues/oculus-go-postprocessing-effects-are-not-applied-to-built-applications",
+        "category": "VR",
+        "date": "Nov 25, 2018",
+        "version": "Version: 2018.3.0b10",
+        "detail": "To reproduce:\n1. Open my attached project \"OculusPP.zip\", scene \"SampleScene\"\n2. Build to Oculus GO\n\nExpected: Post Processing is ap... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "24",
+        "title": "[Shuriken] WaitForJobGroup causes huge FPS drop after upgrading from 5.6...",
+        "url": "https://issuetracker.unity3d.com/issues/shuriken-particle-system-waitforjobgroup-cause-huge-fps-drop-after-upgrading-from-5-dot-6-to-2017-dot-1",
+        "category": "Shuriken",
+        "date": "Jul 14, 2017",
+        "version": "Version: 5.6.0b11",
+        "detail": "How to reproduce:\n1. Download attached project file\n2. Play the \"Particles\" scene\n\nExpected result: Particles system works fine with... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "29",
+        "title": "[PLM] Some baked lights are ignored when lighting is generated with 30+ ...",
+        "url": "https://issuetracker.unity3d.com/issues/progressive-lightmapper-ignoring-lights-in-a-larger-scene",
+        "category": "Global Illumination",
+        "date": "Jun 19, 2017",
+        "version": "Version: 5.6.1f1",
+        "detail": "Steps to reproduce:\n1. Open attached project (ProgressiveLightmapperIssue)\n2. Go to lighting\n3. Select Generate Lighting\n\nExpected r... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "15",
+        "title": "[macOS] GameKit reference in the application when Game Center is not use...",
+        "url": "https://issuetracker.unity3d.com/issues/apple-platforms-gamekit-reference-in-the-application-when-game-room-is-not-used-app-store-rejects-the-build",
+        "category": "MacOS",
+        "date": "Jul 29, 2018",
+        "version": "Version: 2018.2.1f1",
+        "detail": "Reproduction steps:\n1. Open the attached project.\n2. Build it as macOS Standalone.\n3. Navigate to the \"AppName.app\" location using T... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "53",
+        "title": "[Android] Input.gyro is extremely laggy on specific device with Android 7.0",
+        "url": "https://issuetracker.unity3d.com/issues/android-input-dot-gyro-is-extremely-laggy-on-specific-device-with-android-7-dot-0",
+        "category": "Mobile",
+        "date": "May 19, 2017",
+        "version": "Version: 5.6.1f1",
+        "detail": "Steps to reproduce:\n\n1) Download attached project 'AndroidAttitudeBug.zip'  and open in Unity\n2) Build and Run 'Main' scene on a dev... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "57",
+        "title": "Enabling Mesh Renderer during rendering causes error in Console tab",
+        "url": "https://issuetracker.unity3d.com/issues/enabling-mesh-renderer-during-rendering-causes-error-in-console-tab",
+        "category": "Graphics - General",
+        "date": "Apr 03, 2017",
+        "version": "Version: 5.6.0f3",
+        "detail": "Steps to reproduce:\n\n1) Download attached project 'MeshRendererError.zip' and open in Unity\n2) Open scene 'ReproScene' and press Pla... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "57",
+        "title": "JobTempAlloc error appears in Standalone Build output log if trees are i...",
+        "url": "https://issuetracker.unity3d.com/issues/jobtempalloc-error-appears-in-32-bit-standalone-build-output-log-if-trees-are-in-the-scene",
+        "category": "Terrain",
+        "date": "Apr 04, 2017",
+        "version": "Version: 5.6.0f3",
+        "detail": "Reproduction Steps:\n1. Import attached project.\n2. Open Test scene.\n3. Build and Run.\n4. In Standalone Build Data files, open output... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "234",
+        "title": "[Android] Location app crashes due to error 'jstring has wrong type: and...",
+        "url": "https://issuetracker.unity3d.com/issues/android-location-app-crashes-due-to-error-jstring-has-wrong-type-android-dot-location-dot-location",
+        "category": "Mobile",
+        "date": "Dec 01, 2016",
+        "version": "Version: 5.5.0f3",
+        "detail": "How to reproduce:\n1. Open the attached project\n2. Build and Run Test scene on Android device (it has only one line Input.location.St... Read more"
+    },
+    {
+        "status": "By Design",
+        "count": "13",
+        "title": "System.Configuration.ConfigurationErrorsException: Failed to load config...",
+        "url": "https://issuetracker.unity3d.com/issues/system-dot-configuration-dot-configurationerrorsexception-failed-to-load-configuration-section-for-datacontractserializer",
+        "category": "Scripting",
+        "date": "May 07, 2018",
+        "version": "Version: ",
+        "detail": "Using works fine in editor, but on device (iOS / Android) we are getting the error below. Looks like others have encountered this (h... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "13",
+        "title": "[iOS] Random freeze with heavy CPU usage while Destroy is being used rap...",
+        "url": "https://issuetracker.unity3d.com/issues/ios-random-freeze-with-heavy-cpu-usage-while-destroy-is-being-used-rapidly-on-gameobject-dot-deactivate-on-weaker-devices",
+        "category": "Mobile",
+        "date": "Apr 10, 2018",
+        "version": "Version: 2018.1.0b13",
+        "detail": "Reproduction steps:\n1. Open the attached project (Link from the original description or OC link in the edit).\n2. Go to Build Setting... Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "13",
+        "title": "Incorrect transform position in Awake method of an instantiated prefab",
+        "url": "https://issuetracker.unity3d.com/issues/incorrect-transform-position-in-awake-method-of-an-instantiated-prefab",
+        "category": "Scripting",
+        "date": "Oct 18, 2017",
+        "version": "Version: 2017.2.0f3",
+        "detail": "To reproduce:\n1. Open attached Unity project \"New Unity Project.zip\"\n2. Open \"Scene\" scene\n3. Go into Play mode\n4. Input letter \"s\" ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "19",
+        "title": "Exclusive fullscreen always opens on monitor 1 after regaining focus eve...",
+        "url": "https://issuetracker.unity3d.com/issues/exclusive-fullscreen-always-opens-on-monitor-1-after-regaining-focus-even-when-monitor-2-is-set-as-primary-display",
+        "category": "Window management",
+        "date": "Sep 04, 2017",
+        "version": "Version: 2017.1.0p5",
+        "detail": "To reproduce:\n\n1. Download and open attached \"FullScreenTest.zip\" project.\n2. Go to windows display settings and set monitor numbere... Read more"
+    },
+    {
+        "status": "Active",
+        "count": "12",
+        "title": "[Terrain][SpeedTree] Speed Tree doesnt work in HDRP/LWRP",
+        "url": "https://issuetracker.unity3d.com/issues/terrain-speedtree-speed-tree-doesnt-work-in-hdrp-slash-lwrp",
+        "category": "Speedtree Integration",
+        "date": "Nov 06, 2018",
+        "version": "Version: 2018.3",
+        "detail": "Speed Tree materials render in error in LW and HD Render Pipelines Read more"
+    },
+    {
+        "status": "Duplicate",
+        "count": "16",
+        "title": "Dynamically loading Timeline from AssetBundle causes \"Assertion failed o...",
+        "url": "https://issuetracker.unity3d.com/issues/dynamically-loading-timeline-from-assetbundle-causes-assertion-failed-on-expression-pred-star-previous-star-i",
+        "category": "Asset Bundles",
+        "date": "Mar 09, 2018",
+        "version": "Version: 2017.2.0f3",
+        "detail": "Steps to reproduce:\n1. Open user attached project\n2. Play the scene\n3. Observe the \"Assertion failed on expression: 'pred(*previous,... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "72",
+        "title": "[Android] Gradle build fails when building project with asset bundle",
+        "url": "https://issuetracker.unity3d.com/issues/android-gradle-build-fails-when-building-project-with-asset-bundle",
+        "category": "Android",
+        "date": "Nov 16, 2017",
+        "version": "Version: 2017.3.0b1",
+        "detail": "Reproduction steps:\n1. Open the attached project\n2. The project has 1 asset bundle. The bug isn't reproducible using other asset bun... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "58",
+        "title": "VideoPlayer.Play() still has a delay after using VideoPlayer.Prepare()",
+        "url": "https://issuetracker.unity3d.com/issues/videoplayer-dot-play-still-has-a-delay-after-using-videoplayer-dot-prepare",
+        "category": "Video",
+        "date": "May 09, 2017",
+        "version": "Version: 5.6.0p4",
+        "detail": "Steps to reproduce:\n1. Download and open the attached project\n2. Enter Play mode\n\nExpected result: videos are played seamlessly due ... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "37",
+        "title": "[Android] Project fails to build using the updated Android SDK Tools 26....",
+        "url": "https://issuetracker.unity3d.com/issues/the-project-does-not-build-on-android-platform-using-the-updated-android-sdk-tools-26-dot-0-during-the-merging-manifest-files",
+        "category": "Android",
+        "date": "May 02, 2017",
+        "version": "Version: 5.6.0p3",
+        "detail": "Reproduction steps:\n1. Update Android SDK Tools to 26.0.1 or 26.0.2;\n    - Android Studio -> Configure -> SDK Manager -> Android SDK... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "13",
+        "title": "[OSX] Game Window disappears when switching to another application when ...",
+        "url": "https://issuetracker.unity3d.com/issues/osx-game-window-disappears-when-switching-to-another-application-when-using-multiple-monitors",
+        "category": "Editor - Other",
+        "date": "Feb 04, 2018",
+        "version": "Version: 2017.3.0f3",
+        "detail": "To reproduce:\n\n1. Open Unity, create a new project and open it\n2. Have Unity Editor on the main monitor and set Game Window on the s... Read more"
+    },
+    {
+        "status": "Won't Fix",
+        "count": "18",
+        "title": "[iOS] ReplayKit 'Save' button does not work on ~1minute+ videos",
+        "url": "https://issuetracker.unity3d.com/issues/arkit-replaykit-save-button-does-not-work-on-~1minute-plus-videos",
+        "category": "Mobile",
+        "date": "Aug 04, 2017",
+        "version": "Version: 2017.1.0f3",
+        "detail": "Reproduction steps:\n1. Open the attached project.\n2. Build it to iOS 11 device.\n3. Click Start Recording.\n4. Wait a minute.\n5. Click... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "50",
+        "title": "GameObjects mesh is stuck at Combined Mesh (root:scene) and cannot be mo...",
+        "url": "https://issuetracker.unity3d.com/issues/gameobjects-mesh-is-stuck-at-combined-mesh-root-scene-and-cannot-be-moved-after-aborting-a-build-process",
+        "category": "Graphics - General",
+        "date": "Mar 16, 2017",
+        "version": "Version: 5.5.0f3",
+        "detail": "1. Download attached project \"Sand_6_v2\"\n2. Open scene \"Scene 1\"\n3. Notice that it contains a lot of game objects. That's the same g... Read more"
+    },
+    {
+        "status": "Not Reproducible",
+        "count": "29",
+        "title": "Building on top of old build while its output_log.txt is open causes bui...",
+        "url": "https://issuetracker.unity3d.com/issues/building-on-top-of-old-build-while-its-output-log-dot-txt-is-open-causes-build-to-fail",
+        "category": "Build Pipeline",
+        "date": "May 10, 2017",
+        "version": "Version: 2017.1.0b4",
+        "detail": "Steps to reproduce:\n\n1. Create new project\n2. Build and run\n3. Once resolution selection screen launches - close it\n4. Navigate to _... Read more"
+    },
+    {
+        "status": "Fixed",
+        "count": "24",
+        "title": "[Timeline] Clip Root Motion Offsets setting is ignored in the Play mode ...",
+        "url": "https://issuetracker.unity3d.com/issues/timeline-clip-root-motion-offsets-setting-is-ignored-in-the-play-mode-inconsistent-result-between-the-preview-and-play-mode",
+        "category": "Animation",
+        "date": "Aug 06, 2017",
+        "version": "Version: 2017.2.0b5",
+        "detail": "How to reproduce:\n1. Open QA-supplied project\n2. Load \"SCENE\" scene\n2. Select \"Main Camera\" in Hierarchy window\n3. Hit Play button i... Read more"
+    }
+]
