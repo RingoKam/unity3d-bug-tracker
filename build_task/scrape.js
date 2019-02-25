@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const path = require("path");
 const _ = require("lodash");
 const tabSize = 10;
 
@@ -44,7 +45,7 @@ const tabSize = 10;
                         url: issue.querySelector(".cn.tdn").href, //url
                         category: issue.querySelector("p:nth-child(1) > span > a").text, // category
                         date: issue.querySelector("p:nth-child(3)").textContent,  //date
-                        version: issue.querySelector("p:nth-child(5)").textContent, //version 
+                        version: issue.querySelector("p:nth-child(5)").textContent.replace("Version:", "").trim(), //version 
                         detail: issue.querySelector(".bulk.mb0.clear").textContent, //detai
                     };
                     return r;
@@ -56,9 +57,13 @@ const tabSize = 10;
         });
         const taskResults = await Promise.all(tasks);
         const flattenedTaskResults = _.flatten(taskResults);
-        fs.writeFile(`../data/data${i}.json`, JSON.stringify(flattenedTaskResults), () => {
-            console.info(`data${i} written!`);
-        });
+        try {
+            const dir = path.join(__dirname, "../data", `data${i}.json`);
+            console.log(dir);
+            fs.writeFileSync(dir , JSON.stringify(flattenedTaskResults));
+        } catch (error) {
+            console.log(error);            
+        }
     }
     await browser.close();
 })();
