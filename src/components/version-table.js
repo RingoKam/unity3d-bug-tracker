@@ -7,15 +7,12 @@ const VersionTable = () => {
 
     const goToVersion = (version) => {
         console.log(version);
-        navigate(`/version?ver=${version}`);
     }
 
     return (
         <StaticQuery
             query={AllJsonQuery}
             render={data => {
-                const totalCount = data.allDataJson.totalCount;
-                const nodes = data.allDataJson.edges.map(n => n.node);
                 const groupedByVersion = _.groupBy(nodes, node => node.version);
                 const versionAvaliable = Object.keys(groupedByVersion).sort();
                 return <Autocomplete 
@@ -39,22 +36,5 @@ const VersionTable = () => {
     );
 };
 
-const AllJsonQuery = graphql`
-    query {
-        allDataJson {
-            totalCount
-            edges {
-                node {
-                    id
-                    status
-                    category
-                    count
-                    version
-                    title
-                }
-            }
-        }
-    }
-`;
 
 export default VersionTable;

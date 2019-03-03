@@ -30,6 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
                         count
                         version
                         title
+                        url
                     }
                 }
               }
