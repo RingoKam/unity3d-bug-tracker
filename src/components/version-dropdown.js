@@ -6,7 +6,8 @@ import { Autocomplete, TextInput } from "evergreen-ui"
 const VersionTable = ({nodes, onSelect}) => {
     const groupedByVersion = _.groupBy(nodes, node => node.version);
     const versionAvaliable = Object.keys(groupedByVersion).sort();
-    return <Autocomplete 
+    return <Autocomplete
+        openOnFocus 
         title="Version"
         onChange={(ver) => {onSelect(ver)}}
         items={versionAvaliable}
@@ -17,7 +18,11 @@ const VersionTable = ({nodes, onSelect}) => {
                 placeholder="Version..."
                 value={inputValue}
                 innerRef={getRef}
-                {...getInputProps()}
+                {...getInputProps({
+                    onFocus: () => {
+                        props.openMenu()
+                      }
+                })}
                 />
             )
         }}>
