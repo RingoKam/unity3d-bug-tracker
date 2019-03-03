@@ -1,40 +1,35 @@
 import React from "react";
-import { StaticQuery, graphql, navigate } from "gatsby";
 import _ from "lodash";
-import { Autocomplete, TextInput } from "evergreen-ui"
+import { Table } from "evergreen-ui";
+import StatusBadge from "../components/status-badge";
 
-const VersionTable = () => {
-
-    const goToVersion = (version) => {
-        console.log(version);
-    }
-
+const VersionTable = ({data, height}) => {
+    const headers = ["title", "category", "status", "count", "url"];
+    const headersRow = headers.map(key => (
+        <Table.TextHeaderCell key={key}>{key}</Table.TextHeaderCell>
+    ));
+    const tableRows = data
+        .sort((d, dd) => dd.count - d.count)
+        .map(rData => {
+            return (
+                <Table.Row key={rData.id}>
+                    {headers.map((h, i) => (
+                        <Table.TextCell key={i}>
+                            {h === "status" ? StatusBadge(rData[h]) : rData[h]}
+                        </Table.TextCell>
+                    ))}
+                </Table.Row>
+            );
+        });
     return (
-        <StaticQuery
-            query={AllJsonQuery}
-            render={data => {
-                const groupedByVersion = _.groupBy(nodes, node => node.version);
-                const versionAvaliable = Object.keys(groupedByVersion).sort();
-                return <Autocomplete 
-                    title="Version"
-                    onChange={(ver) => {goToVersion(ver)}}
-                    items={versionAvaliable}
-                    children={(props) => {
-                        const { getInputProps, getRef, inputValue } = props
-                        return (
-                          <TextInput
-                            placeholder="Version..."
-                            value={inputValue}
-                            innerRef={getRef}
-                            {...getInputProps()}
-                          />
-                        )
-                    }}>
-                    </Autocomplete>
-            }}
-        />
+        <Table>
+            <Table.Head>
+                {/* <Table.SearchHeaderCell /> */}
+                {headersRow}
+            </Table.Head>
+            <Table.Body height={height}>{tableRows}</Table.Body>
+        </Table>
     );
 };
-
 
 export default VersionTable;
