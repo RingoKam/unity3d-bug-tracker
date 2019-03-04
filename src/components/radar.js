@@ -86,7 +86,6 @@ export default props => {
 
     const handleMouseOver = (event, datum) => {
         const coords = localPoint(event.target.ownerSVGElement, event);
-        console.log(coords, datum);
     };
 
     return (

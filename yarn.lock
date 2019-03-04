@@ -786,21 +786,18 @@
 "@vx/bounds@0.0.182":
   version "0.0.182"
   resolved "https://registry.yarnpkg.com/@vx/bounds/-/bounds-0.0.182.tgz#df3a7db90428f7dd03f428d5eabc67d16c00f7eb"
-  integrity sha512-ep3jAh79fWBYAx9rdoe9z9pec8bNHfyWXP/E60t2HWsCfwoAdtsNXuPKpmHs4AiQlznOe+eqBlz0MG5yFA9o7g==
   dependencies:
     prop-types "^15.5.10"
 
 "@vx/curve@0.0.182":
   version "0.0.182"
   resolved "https://registry.yarnpkg.com/@vx/curve/-/curve-0.0.182.tgz#55487fe71fb00ccc2299437e76b2c68b88c37c7f"
-  integrity sha512-tpuRMx/zs1mvSPUuxynN/7Kj4Mqf94vCdmUvO9LdnrgL5kgFpNgyYN9e0mZyfetbS+FDhBrtR9GC7d6vD36NrA==
   dependencies:
     d3-shape "^1.0.6"
 
 "@vx/event@^0.0.182":
   version "0.0.182"
   resolved "https://registry.yarnpkg.com/@vx/event/-/event-0.0.182.tgz#b5b20a4e14fcd383511ef7a318ca0a10e6da8140"
-  integrity sha512-kEnBfcyuSep3QdlpQjMRE4jSCcEC1xIcnIFkDGuTWLutlUgIP//o5VbeHIW4xLcOhLe4BjuMuPgmUNZB5nL5Cw==
   dependencies:
     "@vx/point" "0.0.182"
 
@@ -814,34 +811,38 @@
 "@vx/group@0.0.183", "@vx/group@^0.0.183":
   version "0.0.183"
   resolved "https://registry.yarnpkg.com/@vx/group/-/group-0.0.183.tgz#15c8b14c5cadbe5f76c3ddcab8c5698cae24b443"
-  integrity sha512-iD2tDL8sl6HjZsMn+kkBjRb29px7qlHF8o6MQ3VbzVjUp+WZEYvA/s1bkqvn3q9tPtFAMBG+YWp9oSnkMdfpYQ==
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.2"
 
+"@vx/hierarchy@^0.0.183":
+  version "0.0.183"
+  resolved "https://registry.yarnpkg.com/@vx/hierarchy/-/hierarchy-0.0.183.tgz#81b4e90777d5b0a2efc016f68c53d0b030749549"
+  dependencies:
+    "@vx/group" "0.0.183"
+    classnames "^2.2.5"
+    d3-hierarchy "^1.1.4"
+    prop-types "^15.6.1"
+
 "@vx/mock-data@^0.0.185":
   version "0.0.185"
   resolved "https://registry.yarnpkg.com/@vx/mock-data/-/mock-data-0.0.185.tgz#c73c2998152eac905abd9a2efdb4c0ec96c0bbf8"
-  integrity sha512-zUXnrIFTN6ybBGQ1BrgKRXSNHgSw6PIs/2nEXWNkZ2Ar5wMSNnsTkgYxyOxHU/eXQV2mzqgSaGW2ylCxbg+NFQ==
   dependencies:
     d3-random "^1.0.3"
 
 "@vx/point@0.0.182", "@vx/point@^0.0.182":
   version "0.0.182"
   resolved "https://registry.yarnpkg.com/@vx/point/-/point-0.0.182.tgz#72abfa6ae923cf9bad23d9dd51709b2f31d81bf8"
-  integrity sha512-ZWDFVL5+RQXDSY6a5DZDRAoTFUmz0nxqUJidIHP9kDN1MGwoX43yaG7Ss1iJxe5a7Np5XGB2sm3xvmgZvf4a6g==
 
 "@vx/scale@^0.0.182":
   version "0.0.182"
   resolved "https://registry.yarnpkg.com/@vx/scale/-/scale-0.0.182.tgz#22f4423c7188cc8be0b6dbfe9db3e1544d639a98"
-  integrity sha512-QFNWElBUscZD40SZoBOJtzqNU9fS5RAZypvYYJE1mipcEMLXLa8MExpeu/VushAbkSBz2B3T6K9myBL0QYi2xQ==
   dependencies:
     d3-scale "^2.0.0"
 
 "@vx/shape@^0.0.184":
   version "0.0.184"
   resolved "https://registry.yarnpkg.com/@vx/shape/-/shape-0.0.184.tgz#e4ba232644cb6a2bc82f8faf5b20928bd948d5fb"
-  integrity sha512-esO2ztlb4edFX/Vzb9xzh4K2wbXUo3HrKMjFgFnJ8vU9RAD+8PQ3NDm/1UYm+OaOjVqxbmX5pwW1r8kMlUcppw==
   dependencies:
     "@vx/curve" "0.0.182"
     "@vx/group" "0.0.183"
@@ -854,7 +855,6 @@
 "@vx/tooltip@^0.0.184":
   version "0.0.184"
   resolved "https://registry.yarnpkg.com/@vx/tooltip/-/tooltip-0.0.184.tgz#7c47cf2b5253df5ff2f1fa5852519538fa0d5574"
-  integrity sha512-XxEuh54FpKr87ooKpOMv4VYVWyub7F0Npdgp1TMLXn92Wi/07MMe8+u6dCfDyFtnPl20xkwQWe0XkXKOTaw6kw==
   dependencies:
     "@vx/bounds" "0.0.182"
     classnames "^2.2.5"
@@ -2757,7 +2757,7 @@ d3-geo@1:
   dependencies:
     d3-array "1"
 
-d3-hierarchy@1:
+d3-hierarchy@1, d3-hierarchy@^1.1.4, d3-hierarchy@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/d3-hierarchy/-/d3-hierarchy-1.1.8.tgz#7a6317bd3ed24e324641b6f1e76e978836b008cc"
 
