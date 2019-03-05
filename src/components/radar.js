@@ -19,7 +19,7 @@ const colorPalette = {
     teal : "#14B5D0",
     neutral : "#425A70",
 }
-
+// you here?
 
 const ANG = 360;
 

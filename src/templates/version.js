@@ -7,6 +7,7 @@ import SEO from "../components/seo";
 import VersionTable from "../components/version-table";
 import Heatmap from "../components/heatmap";
 
+
 const SecondPage = d => {
     const title = d["*"];
     const data = d.pageContext.data;

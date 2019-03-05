@@ -16,6 +16,7 @@
     "@vx/tooltip": "^0.0.184",
     "d3": "^5.9.1",
     "d3-hierarchy": "^1.1.8",
+    "d3-scale": "^2.2.2",
     "evergreen-ui": "^4.12.1",
     "gatsby": "^2.1.11",
     "gatsby-image": "^2.0.29",

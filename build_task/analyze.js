@@ -12,7 +12,6 @@ keys.forEach((key, i) => {
         .key((d) => d.status)
         .rollup(d => d.length)
         .entries(data[key]);
-        console.log(r);
     fs.writeFileSync(`../data/n/data_${i}.json`, JSON.stringify(r));
 })
 

@@ -49,7 +49,6 @@ const Status = ({ data }) => {
                     xScale={xScale}>
                     {
                         barStacks => {
-                            debugger;
                             return (
                                 <g></g>
                             );
