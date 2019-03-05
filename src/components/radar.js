@@ -19,9 +19,23 @@ const colorPalette = {
     teal : "#14B5D0",
     neutral : "#425A70",
 }
-// you here?
+
+const possibleStatus = [
+     "Fixed",
+     "Fix in review",
+     "Active",
+     "Won't Fix",
+     "By Design",
+     "Postponed",
+     "Not Reproducible",
+     "Duplicate"
+]
 
 const ANG = 360;
+
+function test() {
+    return "";
+}
 
 export default props => {
     const {
@@ -92,7 +106,7 @@ export default props => {
         <svg width={width} height={height}>
             <rect fill={bg} width={width} height={height} rx={14} />
             <Group top={height / 2 - margin.top} left={width / 2}>
-                //just one
+                //just one, use to draw the spiderweb
                 {[...Array(levels)].fill(null).map((_, i) => {
                     const r = ((i + 1) * radius) / levels;
                     return (
@@ -109,7 +123,7 @@ export default props => {
                         />
                     );
                 })}
-                //just one
+                //just one, use to draw the spiderweb
                 {[...Array(maxScale.values.length)].fill(null).map((_, i) => {
                     return (
                         <Line
@@ -120,7 +134,7 @@ export default props => {
                         />
                     );
                 })}
-                //handle many
+                //handle many, to draw the colored graph
                 {polygonPoints2.map((polygonPoints, i) => {
                     return (
                         <g key={i}>
