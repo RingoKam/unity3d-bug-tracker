@@ -14,7 +14,7 @@ const SecondPage = d => {
     return (
         <Layout>
             <SEO title={title} />
-            <h1>Version {title}</h1>
+            <h1>Unity Ver. {title}</h1>
             <Heatmap rows={data}/>
             <Radar rows={data} />
             <VersionTable data={data} height={250}/>

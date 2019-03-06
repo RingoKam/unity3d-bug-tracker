@@ -1,18 +1,19 @@
 import React from 'react';
 import { Group } from '@vx/group';
 import { Treemap } from '@vx/hierarchy';
-import { scaleLinear } from '@vx/scale';
+import { scaleLinear, scaleOrdinal } from '@vx/scale';
 import * as d3 from "d3";
-import { hierarchy, stratify, treemapSquarify } from 'd3-hierarchy';
+import { hierarchy, treemapSquarify } from 'd3-hierarchy';
 
-const blue = 'rgba(3, 115, 217, 0.1)';
-const green = 'rgba(0, 255, 112, 0.1)';
+const blue = 'rgba(3, 115, 217, 0.5)';
+const green = 'rgba(0, 255, 112, 0.5)';
 const bg = "rgba(0,0,0,0)";
+
 
 export default ({
     rows,
-    width = 1000,
-    height = 1000,
+    width = 500,
+    height = 500,
     margin = {
         top: 0,
         left: 30,
@@ -23,8 +24,8 @@ export default ({
     const yMax = height - margin.top - margin.bottom;
 
     rows = rows.map(r => { r.count = parseInt(r.count) + 1; return r; })
-    const colorScale = scaleLinear({
-        domain: [0, Math.max(...rows.map(d => d.count))],
+    const colorScale = scaleOrdinal({
+        domain: [0, 4],
         range: [blue, green]
     });
 
@@ -51,37 +52,26 @@ export default ({
                 tile={treemapSquarify}
                 round={true}
                 paddingInner={1}
-                paddingOuter={3}
-                paddingTop={19}
+                paddingOuter={1}
+                paddingTop={15}
             >
                 {treemap => {
-                    const nodes = treemap.descendants().reverse();
+                    const nodes = treemap.descendants()
                     debugger;
                     return (
                         <Group top={margin.top}>
                             {nodes.map((node, i) => {
                                 const width = node.x1 - node.x0;
-                                const height = node.y1 || 0 - node.y0 || 0;
+                                const height = node.y1 - node.y0;
                                 console.log(node);
 
                                 return (
                                     <Group key={`treemap-node-${i}`} top={node.y0} left={node.x0}>
-                                        {node.depth == 1 && (
-                                            <rect
-                                                width={width}
-                                                height={height}
-                                                stroke={bg}
-                                                strokeWidth={4}
-                                                fill={'transparent'}
-                                            />
-                                        )}
-                                        {node.depth >= 2 && (
-                                            <>
                                                 <rect
                                                     width={width}
                                                     height={height}
                                                     stroke={bg}
-                                                    fill={colorScale(node.value)}
+                                                    fill={colorScale(node.depth)}
                                                 />
                                                 <clipPath id={`clip-${i}-${node.data.key}`}>
                                                     <use xlinkHref={`#rect-${i}`} />
@@ -94,10 +84,8 @@ export default ({
                                                         font: '10px sans-serif'
                                                     }}
                                                 >
-                                                    {node.data.key}_{node.value}
+                                                    {node.value} {node.data.key}
                                                 </text>
-                                            </>
-                                        )}
                                     </Group>
                                 );
                             })}
