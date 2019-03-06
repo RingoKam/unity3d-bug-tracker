@@ -2,8 +2,10 @@ import React from 'react';
 import { Group } from '@vx/group';
 import { Treemap } from '@vx/hierarchy';
 import { scaleLinear, scaleOrdinal } from '@vx/scale';
+import GetColor from "../get-color"
 import * as d3 from "d3";
 import { hierarchy, treemapSquarify } from 'd3-hierarchy';
+import getColor from '../get-color';
 
 const blue = 'rgba(3, 115, 217, 0.5)';
 const green = 'rgba(0, 255, 112, 0.5)';
@@ -24,10 +26,14 @@ export default ({
     const yMax = height - margin.top - margin.bottom;
 
     rows = rows.map(r => { r.count = parseInt(r.count) + 1; return r; })
-    const colorScale = scaleOrdinal({
-        domain: [0, 4],
-        range: [blue, green]
-    });
+    const colorScale = (status) => {
+        const endColor = getColor(status);
+        return scaleLinear({
+            domain: [0, 3],
+            range: [blue, green]
+        })
+    }
+    
 
     const data = d3.nest()
         .key(d => d.version).key(d => d.status).key(d => d.category)
@@ -37,6 +43,7 @@ export default ({
         }).entries(rows);
 
     const root2 = hierarchy({ values: data }, (d) => d.values)
+        .eachBefore(d => {console.log(d); return d;})
        .sum(v => v.value);
 
     // const root = hierarchy(TreeMapData)
@@ -71,7 +78,7 @@ export default ({
                                                     width={width}
                                                     height={height}
                                                     stroke={bg}
-                                                    fill={colorScale(node.depth)}
+                                                    fill={colorScale()(node.depth)}
                                                 />
                                                 <clipPath id={`clip-${i}-${node.data.key}`}>
                                                     <use xlinkHref={`#rect-${i}`} />
