@@ -4,7 +4,7 @@ import { scaleLinear } from "@vx/scale";
 import { Point } from "@vx/point";
 import { Line, LineRadial } from "@vx/shape";
 import { localPoint } from "@vx/event";
-import getColor from "../get-color"
+import { getColor } from "../get-color"
 
 import * as d3 from "d3";
 
