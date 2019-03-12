@@ -40,7 +40,6 @@ exports.createPages = ({ graphql, actions }) => {
           if (result.errors) {
             reject(result.errors)
           }
-          console.log(result);
           const nodes = result.data.allDataJson.edges.map(n => n.node);
           const groupedByVersion = _.groupBy(nodes, node => node.version);
           const versionAvaliable = Object.keys(groupedByVersion);
