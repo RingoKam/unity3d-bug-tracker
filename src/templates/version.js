@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import VersionTable from "../components/version-table";
 import Heatmap from "../components/heatmap";
+import HeaderStatusBar from "../components/header-status-bar";
 
 
 const SecondPage = d => {
@@ -15,6 +16,7 @@ const SecondPage = d => {
         <Layout>
             <SEO title={title} />
             <h1>Unity Ver. {title}</h1>
+            <HeaderStatusBar data={data}/>
             <Heatmap rows={data}/>
             <Radar rows={data} />
             <VersionTable data={data} height={250}/>
