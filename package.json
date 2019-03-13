@@ -44,7 +44,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "scrape": "node ./build_task/scrape",
+    "scrape": "node ./build_task/scrape && node ./build_task/version-info",
     "scrape_version": "node ./build_task/version-info",
     "consolidate": "node ./build_task/consolidate"
   },

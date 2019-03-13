@@ -17,9 +17,9 @@ const SecondPage = d => {
             <SEO title={title} />
             <h1>Unity Ver. {title}</h1>
             <HeaderStatusBar data={data}/>
+            <VersionTable data={data} height={250}/>
             <Heatmap rows={data}/>
             <Radar rows={data} />
-            <VersionTable data={data} height={250}/>
             <Link to="/">Go back to the homepage</Link>
         </Layout>
     );

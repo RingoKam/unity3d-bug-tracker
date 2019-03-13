@@ -13,8 +13,8 @@ const bg = "rgba(0,0,0,0.09)";
 
 export default ({
     rows,
-    width = 1000,
-    height = 1000,
+    width = 500,
+    height = 500,
     margin = {
         top: 0,
         left: 30,
@@ -32,7 +32,6 @@ export default ({
             range: endColorType === "neutral" ? [bg, bg] : [getColor(endColorType), getColor(endColorType)]
         })
     }
-    
 
     const data = d3.nest()
         .key(d => d.version).key(d => d.status).key(d => d.category)
@@ -67,8 +66,6 @@ export default ({
                             {nodes.map((node, i) => {
                                 const width = node.x1 - node.x0;
                                 const height = node.y1 - node.y0;
-                                console.log(node);
-
                                 return (
                                     <Group key={`treemap-node-${i}`} top={node.y0} left={node.x0}>
                                                 <rect
@@ -88,7 +85,7 @@ export default ({
                                                         font: '10px sans-serif'
                                                     }}
                                                 >
-                                                    ({node.value}) {node.data.key}
+                                                    {node.depth < 3 ? (node.data.key || node.value) : (node.value)}
                                                 </text>
                                     </Group>
                                 );
