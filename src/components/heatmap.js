@@ -34,14 +34,20 @@ export default ({
     }
 
     const data = d3.nest()
-        .key(d => d.version).key(d => d.status).key(d => d.category)
+        .key(d => d.version)
+        .key(d => d.status)
+        .key(d => d.category)
         .rollup(d => {
             return d3.sum(d, (d) => d.count);
         }).entries(rows);
 
     const root2 = hierarchy({ values: data }, (d) => d.values)
-        .eachBefore(d => {console.log(d); return d;})
+        .eachBefore(d => {return d;})
        .sum(v => v.value);
+
+
+    const hover = (data) => {
+    }
 
     // const root = hierarchy(TreeMapData)
     //     .eachBefore(d => d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name)
@@ -69,6 +75,8 @@ export default ({
                                 return (
                                     <Group key={`treemap-node-${i}`} top={node.y0} left={node.x0}>
                                                 <rect
+                                                    title={node.data.key}
+                                                    onMouseEnter={() => hover(node.data)}
                                                     width={width}
                                                     height={height}
                                                     stroke={background}
