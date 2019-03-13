@@ -16,8 +16,8 @@ const HeaderStatusBar = ({data}) => {
             color,
             style: {
                 'width': percent + "%",
-                'background-color': color,
-                'lineHeight': "8px"
+                'backgroundColor': color,
+                'height': "8px"
             }
         }
     })
@@ -28,13 +28,13 @@ const HeaderStatusBar = ({data}) => {
 
     const getColorSpan = () => {
         return final.map(f => {
-            return (<span style={f.style}></span>)
+            return (<span key={f.status} style={f.style}></span>)
         }) 
     }
 
     return (<div style={HeaderStatusBarStyle}>
         <div></div>
-        <button type="button">
+        <button style={HeaderStatusBarStyle} type="button">
         {getColorSpan()}
         </button>
     </div>);

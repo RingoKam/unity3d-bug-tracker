@@ -45,6 +45,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "scrape": "node ./build_task/scrape",
+    "scrape_version": "node ./build_task/version-info",
     "consolidate": "node ./build_task/consolidate"
   },
   "repository": {
