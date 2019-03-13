@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,9 +9,6 @@ const SecondPage = (page) => {
   // if(!version) {
   // }
   const version = page.location.search.split("=")[1];
-  if (!version) {
-      navigate("/")
-  }
 
   return (
     <Layout>

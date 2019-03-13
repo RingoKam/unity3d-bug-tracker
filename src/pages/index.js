@@ -1,12 +1,12 @@
 import React from "react";
-import {navigate, StaticQuery } from "gatsby"
+import { StaticQuery } from "gatsby"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import VersionDropdown from "../components/version-dropdown";
 
 const IndexPage = () => {
     const goToVersion = (version) => {
-      navigate(`/${version}`);
+    //   navigate(`/${version}`);
     } 
     return (
         <Layout>
