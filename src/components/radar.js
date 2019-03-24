@@ -57,7 +57,7 @@ export default props => {
     //     .rollup(d => d.length)
     //     .entries(rows);
 
-    const data2 = d3
+    const data = d3
         .nest()
         .key(d => d.status)
         .key(d => d.category)
@@ -65,7 +65,7 @@ export default props => {
         .entries(rows);
 
     //contain the highest value, use for scaling
-    const maxScale = data2.map(d => {
+    const maxScale = data.map(d => {
         return {
             ...d,
             sort: d.values.reduce((a,c) => a += c.value, 0)
@@ -94,7 +94,7 @@ export default props => {
     const points = genPoints(maxScale.values.length, radius);
 
     //data2
-    const polygonPoints2 = data2.map(d => genPolygonPoints(d.values, yScale, y, d.key));
+    const polygonPoints2 = data.map(d => genPolygonPoints(d.values, yScale, y, d.key));
 
     const zeroPoint = new Point({ x: 0, y: 0 });
 
