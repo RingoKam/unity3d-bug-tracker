@@ -652,18 +652,9 @@
     globals "^11.1.0"
     lodash "^4.17.10"
 
-"@babel/types@^7.0.0", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.3.3":
+"@babel/types@^7.0.0", "@babel/types@^7.0.0-beta.49", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.3.3":
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.3.3.tgz#6c44d1cdac2a7625b624216657d5bc6c107ab436"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.11"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.0.0-beta.49":
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.4.0.tgz#670724f77d24cce6cc7d8cf64599d511d164894c"
-  integrity sha512-aPvkXyU2SPOnztlgo8n9cEiXW755mgyvueUPcpStqdzoSPm0fjO0vQBjLkt3JKJW7ufikfcnMTTPsN1xaTsBPA==
   dependencies:
     esutils "^2.0.2"
     lodash "^4.17.11"
@@ -795,7 +786,6 @@
 "@vx/axis@^0.0.184":
   version "0.0.184"
   resolved "https://registry.yarnpkg.com/@vx/axis/-/axis-0.0.184.tgz#0b65f0e274af004ceeee4fd53d1dc8d81e01d57e"
-  integrity sha512-5yXU2jwNEAnaOXfOcnyzo9gXoqkdcb9iMaqDZ3ZwXr1qk26dPeZOSPl32FLAkNL4JsAxmUjZIEcvXrNLNEZarw==
   dependencies:
     "@vx/group" "0.0.183"
     "@vx/point" "0.0.182"
@@ -848,7 +838,6 @@
 "@vx/legend@^0.0.183":
   version "0.0.183"
   resolved "https://registry.yarnpkg.com/@vx/legend/-/legend-0.0.183.tgz#b9f7b6a1cd20a0a0cb143b4dea8a30957b1838a8"
-  integrity sha512-pb4EYhPythpvILzD9+89tmrZnsOym8f2nAh1s8luqKLL0KOZ1+r26kyVA7l16bECklVo+bXJeORfhjf5ZIddaA==
   dependencies:
     "@vx/group" "0.0.183"
     classnames "^2.2.5"
@@ -885,7 +874,6 @@
 "@vx/text@0.0.183":
   version "0.0.183"
   resolved "https://registry.yarnpkg.com/@vx/text/-/text-0.0.183.tgz#8bed9eef00eee169158dd0a0a5ee5cd3374c4db3"
-  integrity sha512-SM97C6I2Oy3FdbjM0zb2oZ8xgPskQE3r0FdGHZgq6Dk1b3lYwuW3KqdXn598BRl3iL9jfSyR6vFN9z6NV0FFww==
   dependencies:
     "@babel/core" "^7.0.0"
     babel-plugin-lodash "^3.3.2"
@@ -1425,7 +1413,6 @@ babel-plugin-dynamic-import-node@^1.2.0:
 babel-plugin-lodash@^3.3.2:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/babel-plugin-lodash/-/babel-plugin-lodash-3.3.4.tgz#4f6844358a1340baed182adbeffa8df9967bc196"
-  integrity sha512-yDZLjK7TCkWl1gpBeBGmuaDIFhZKmkoL+Cu2MUUjv5VxUZx/z7tBGBCBcQs5RI1Bkz5LLmNdjx7paOyQtMovyg==
   dependencies:
     "@babel/helper-module-imports" "^7.0.0-beta.49"
     "@babel/types" "^7.0.0-beta.49"
@@ -1524,7 +1511,6 @@ backo2@1.0.2:
 balanced-match@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
-  integrity sha1-yz8+PHMtwPAe5wtAPzAuYddwmDg=
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -6365,7 +6351,6 @@ map-visit@^1.0.0:
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
-  integrity sha1-3oGf282E3M2PrlnGrreWFbnSZqw=
 
 math-random@^1.0.1:
   version "1.0.4"
@@ -8294,7 +8279,6 @@ redent@^1.0.0:
 reduce-css-calc@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/reduce-css-calc/-/reduce-css-calc-1.3.0.tgz#747c914e049614a4c9cfbba629871ad1d2927716"
-  integrity sha1-dHyRTgSWFKTJz7umKYca0dKSdxY=
   dependencies:
     balanced-match "^0.4.2"
     math-expression-evaluator "^1.2.14"
@@ -8303,7 +8287,6 @@ reduce-css-calc@^1.3.0:
 reduce-function-call@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
-  integrity sha1-WiAL+S4ON3UXUv5FsKszD9S2vpk=
   dependencies:
     balanced-match "^0.4.2"
 
@@ -8490,7 +8473,6 @@ require-main-filename@^1.0.1:
 require-package-name@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/require-package-name/-/require-package-name-2.0.1.tgz#c11e97276b65b8e2923f75dabf5fb2ef0c3841b9"
-  integrity sha1-wR6XJ2tluOKSP3Xav1+y7ww4Qbk=
 
 requires-port@^1.0.0:
   version "1.0.0"

@@ -73,6 +73,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: versionTemplate,
             context: {
               data: groupedByVersion[ver],
+              releaseDate: groupedByVersion[ver][0].releaseDate,
+              releaseUrl: groupedByVersion[ver][0].releaseUrl,
             },
           })
         })

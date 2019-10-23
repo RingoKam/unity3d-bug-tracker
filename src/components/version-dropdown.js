@@ -4,7 +4,7 @@ import _ from "lodash";
 import { Autocomplete, TextInput } from "evergreen-ui"
 
 const VersionTable = ({nodes, onSelect}) => {
-    const groupedByVersion = _.groupBy(nodes, node => node.version);
+    const groupedByVersion = _.groupBy(nodes, node => node.title);
     const versionAvaliable = Object.keys(groupedByVersion).sort();
     return <Autocomplete
         openOnFocus 

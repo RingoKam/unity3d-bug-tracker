@@ -3,11 +3,12 @@ import { StaticQuery } from "gatsby"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import VersionDropdown from "../components/version-dropdown";
+import { navigate } from '@reach/router';
 
 const IndexPage = () => {
     const goToVersion = (version) => {
-    //   navigate(`/${version}`);
-    } 
+        navigate(`/${version}`);
+    }
     return (
         <Layout>
             <SEO
@@ -19,9 +20,10 @@ const IndexPage = () => {
             <StaticQuery
                 query={AllJsonQuery}
                 render={data => {
-                    const totalCount = data.allDataJson.totalCount;
-                    const nodes = data.allDataJson.edges.map(n => n.node);
-                    return(<VersionDropdown nodes={nodes} onSelect={goToVersion} />)
+                    console.log(data);
+                    const totalCount = data.allVersionJson.totalCount;
+                    const nodes = data.allVersionJson.edges.map(n => n.node);
+                    return (<VersionDropdown nodes={nodes} onSelect={goToVersion} />)
                 }}
             />
         </Layout>
@@ -30,19 +32,14 @@ const IndexPage = () => {
 
 const AllJsonQuery = graphql`
     query {
-        allDataJson {
-            totalCount
-            edges {
-                node {
-                    id
-                    status
-                    category
-                    count
-                    version
-                    title
+        allVersionJson {
+                totalCount
+                edges {
+                    node {
+                        title
+                    }
                 }
             }
-        }
     }
 `;
 

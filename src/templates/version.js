@@ -11,16 +11,18 @@ import Stackbar from "../components/stack-bar";
 
 const SecondPage = d => {
     const title = d["*"];
-    const data = d.pageContext.data;
+    console.log(d);
+    const { data, releaseDate, releaseUrl } = d.pageContext;
     return (
         <Layout>
             <SEO title={title} />
-            <h1>Unity Ver. {title}</h1>
-            <Stackbar data={data}/>
+            <h1>Unity Ver. <a href={releaseUrl}>{title}</a></h1>
+            <h3>Released on {releaseDate}</h3>
+            {/* <Stackbar data={data}/> */}
             <HeaderStatusBar data={data}/>
             <VersionTable data={data} height={250}/>
-            <Heatmap rows={data}/>
-            <Radar rows={data} />
+            {/* <Heatmap rows={data}/> */}
+            {/* <Radar rows={data} /> */}
             <Link to="/">Go back to the homepage</Link>
         </Layout>
     );
