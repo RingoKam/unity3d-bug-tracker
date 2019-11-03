@@ -1,21 +1,37 @@
-export const getColorType = status => {
-    switch (status) {
-        case "Fixed":
-        case "Fix in review":
-            return "green";
-        case "Active":
-        case "Won't Fix":
-            return "red";
-        case "By Design":
-        case "Postponed":
-            return "orange";
-        case "Not Reproducible":
-            return "teal";
-        case "Duplicate":
-        default:
-            return "neutral";
-    }
-};
+import { useState } from "react"
+
+const FIXED = "Fixed"
+const ACTIVE = "Active";
+const WONTFIX = "Won't Fix";
+const BYDESIGN = "By Design";
+const POSTPONED = "Postponed";
+const NOTREPRODUCIBLE = "Not Reproducible";
+const DUPLICATE = "Duplicate";
+
+const defaultConfig = {
+    [FIXED]: "green",
+    [ACTIVE]: "green",
+    [WONTFIX]: "red",
+    [BYDESIGN]: "orange",
+    [POSTPONED]: "orange",
+    [NOTREPRODUCIBLE]: "neutral",
+    [DUPLICATE]: "neutral"
+} 
+
+//potential change this to something we can chaneg?
+// export function useColorConfig() {
+//     const [ config, setConfig ] = useState(defaultConfig);
+//     function setColorConfig(newConfig) {
+//         setConfig(newConfig);
+//     }
+//     return [ config, setColorConfig ]
+// }
+
+export function getColorType(state) {
+    const color = defaultConfig[state];
+    return color === undefined ? defaultConfig.Duplicate : color; 
+}
+
 
 export const colorPalette = {
     red : "#EC4C47",

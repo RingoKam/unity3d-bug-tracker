@@ -6,6 +6,7 @@ import VersionDropdown from "../components/version-dropdown";
 import { navigate } from '@reach/router';
 
 const IndexPage = () => {
+    console.log("i got clicked")
     const goToVersion = (version) => {
         navigate(`/${version}`);
     }
