@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { groupBy } from "lodash";
 import { Pane } from "evergreen-ui"
+import { colorPalette, defaultConfig } from "../get-color";
 
 import Radar from "../components/radar";
 import Layout from "../components/layout";
@@ -11,20 +12,33 @@ import Heatmap from "../components/heatmap";
 import HeaderStatusBar from "../components/header-status-bar";
 import Stackbar from "../components/stack-bar";
 import CategoryTagInput from "../components/category-tag-input";
+import ColorConfig from "../components/color-config";
 
 const SecondPage = d => {
     const title = d["*"];
     const { data, releaseDate, releaseUrl } = d.pageContext;
     //Get a list of unqiue category, allow user to select what category they care about...
     const initalState = Object.keys(groupBy(data, "category"));
+    const availableColor = Object.keys(colorPalette);
+
     const [ categories, setcategories ] = useState(initalState);
+    const [ colorConfig, setColorConfig ] = useState(defaultConfig);
+    
     return (
         <Layout>
             <SEO title={title} />
             <h1>Unity Ver. <a href={releaseUrl}>{title}</a></h1>
             <h3>Released on {releaseDate}</h3>
-            <Pane>
-                <CategoryTagInput selectable={initalState} categories={categories} setcategories={setcategories}/>
+            <Pane
+                padding={16}>
+                <ColorConfig 
+                    colorConfig={colorConfig} 
+                    setColorConfig={setColorConfig} 
+                    availableColor={availableColor} />
+                <CategoryTagInput 
+                    selectable={initalState} 
+                    categories={categories} 
+                    setcategories={setcategories}/>
             </Pane>
             {/* <Stackbar data={data}/> */}
             {/* <HeaderStatusBar data={data}/> */}

@@ -8,9 +8,9 @@ const POSTPONED = "Postponed";
 const NOTREPRODUCIBLE = "Not Reproducible";
 const DUPLICATE = "Duplicate";
 
-const defaultConfig = {
+export const defaultConfig = {
     [FIXED]: "green",
-    [ACTIVE]: "green",
+    [ACTIVE]: "red",
     [WONTFIX]: "red",
     [BYDESIGN]: "orange",
     [POSTPONED]: "orange",
