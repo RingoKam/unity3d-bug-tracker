@@ -7,6 +7,7 @@ const BYDESIGN = "By Design";
 const POSTPONED = "Postponed";
 const NOTREPRODUCIBLE = "Not Reproducible";
 const DUPLICATE = "Duplicate";
+const FIXINREVIEW = "Fix In Review";
 
 export const defaultConfig = {
     [FIXED]: "green",
@@ -15,7 +16,8 @@ export const defaultConfig = {
     [BYDESIGN]: "orange",
     [POSTPONED]: "orange",
     [NOTREPRODUCIBLE]: "neutral",
-    [DUPLICATE]: "neutral"
+    [DUPLICATE]: "neutral",
+    [FIXINREVIEW]: "teal"
 } 
 
 //potential change this to something we can chaneg?

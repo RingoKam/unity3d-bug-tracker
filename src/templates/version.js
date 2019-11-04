@@ -14,6 +14,7 @@ import Stackbar from "../components/stack-bar";
 import CategoryTagInput from "../components/category-tag-input";
 import ColorConfig from "../components/color-config";
 import WaffleGraph from "../components/waffle-graph";
+import SunBurstGraph from "../components/sun-burst-graph";
 
 const SecondPage = d => {
     const title = d["*"];
@@ -55,11 +56,19 @@ const SecondPage = d => {
                     categories={categories} 
                     setcategories={setcategories}/>
             </Pane>
-            <Card height={300}>
-                <WaffleGraph 
-                    data={filteredDataWithColor}
-                    />
-            </Card>
+            <Pane 
+                display={"flex"}
+                flexWrap={"wrap"}
+                justifyContent={"space-evenly"}>
+                <Card height={300} width={300}>
+                    <WaffleGraph 
+                        data={filteredDataWithColor}
+                        />
+                </Card>
+                <Card height={300} width={300}>
+                    <SunBurstGraph data={filteredDataWithColor}/>
+                </Card>
+            </Pane>
             {/* <Stackbar data={data}/> */}
             {/* <HeaderStatusBar data={data}/> */}
             {/* <VersionTable data={data} height={250}/> */}

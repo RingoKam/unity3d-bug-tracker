@@ -2,7 +2,6 @@ import React from "react"
 import { ResponsiveWaffle } from "@nivo/waffle"
 import { groupBy, uniq } from "lodash";
 import { limitStringLength } from "../helpers/data-format"
-import { colorPalette } from "../get-color";
 
 const WaffleGraph = ({data}) => {
     const groupByColor = groupBy(data, "color");
@@ -19,12 +18,12 @@ const WaffleGraph = ({data}) => {
             colorType
         }
     }).sort((a,b) => { return a.other === b.other ? 0 : -1 });
-    
-    console.log(chartData);
 
     return (
         <ResponsiveWaffle
             data={chartData}
+            width={500}
+            height={500}
             rows={10}
             columns={10}
             padding={1}

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@nivo/sunburst": "^0.59.1",
     "@nivo/waffle": "^0.59.1",
     "@vx/axis": "^0.0.184",
     "@vx/event": "^0.0.182",
