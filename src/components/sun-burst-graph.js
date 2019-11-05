@@ -6,25 +6,24 @@ import { groupBy, uniq } from "lodash";
 const WaffleGraph = ({data}) => {
     
     // group by 
-    const groupedByColorType = groupBy(data, "colorType");
+    const groupedByCategory = groupBy(data, "category");
     const total = data.length;
     //loop thru the grouped data, find out whats the 
     //1st child color w/ status -> category w/\
-    const children = Object.keys(groupedByColorType).map(colorType => {
-        const rows = groupedByColorType[colorType];
-        const status = uniq(rows.map(row => row.status)).join(", ");
-        const color = rows[0].color;
-        const groupedByCategory = groupBy(rows, "category");
-        const children = Object.keys(groupedByCategory).map(category => {
+    const children = Object.keys(groupedByCategory).map(category => {
+        const rows = groupedByCategory[category];
+        const groupedByColorType = groupBy(rows, "colorType");
+        const children = Object.keys(groupedByColorType).map(colorType => {
+            const { color } = groupedByColorType[colorType][0];
             return {
                 name: category,
                 color: color,
-                value: groupedByCategory[category].length 
+                value: groupedByColorType[colorType].length 
             }
         }).sort((a,b) => a.value - b.value);
         return {
-            name: status, 
-            color: color,
+            name: category, 
+            color: "orange",
             children
         }  
     }).sort((a,b) => a.children.length - b.children.length );

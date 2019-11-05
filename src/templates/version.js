@@ -97,11 +97,11 @@ const SecondPage = d => {
                     width="100%"
                     paddingX={majorScale(1)}
                     paddingY={majorScale(1)}>
-                    <Card width="100%" marginLeft="16px">
-                        <Grid data={filteredDataWithColor}></Grid>
-                    </Card>
                     <Card {...wh} elevation={1}>
                         <WaffleGraph data={filteredDataWithColor} />
+                    </Card>
+                    <Card width="100%" marginLeft="16px">
+                        <Grid data={filteredDataWithColor}></Grid>
                     </Card>
                 </Pane>
                
