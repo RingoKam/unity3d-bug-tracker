@@ -24,7 +24,6 @@ const IndexPage = () => {
                 <StaticQuery
                     query={AllJsonQuery}
                     render={data => {
-                        console.log(data);
                         const totalCount = data.allVersionJson.totalCount;
                         const nodes = data.allVersionJson.edges.map(n => n.node);
                         return (

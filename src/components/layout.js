@@ -22,7 +22,8 @@ const Layout = ({ children }) => (
             height: "100vh",
             display: "flex",
             flexDirection: "column",
-            textAlign: "center"
+            textAlign: "center",
+            backgroundColor: "#f5f6f7"
           }}
           >
           {/* <Header siteTitle={data.site.siteMetadata.title} /> */}

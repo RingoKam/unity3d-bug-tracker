@@ -19,11 +19,31 @@ const WaffleGraph = ({data}) => {
         }
     }).sort((a,b) => { return a.other === b.other ? 0 : -1 });
 
+    const legend = {
+        anchor: "right",
+        direction: "column",
+        justify: false,
+        translateX: -100,
+        translateY: 0,
+        itemWidth: 100,
+        itemHeight: 50,
+        itemsSpacing: 4,
+        fontSize: 20,
+        symbolSize: 50,
+        itemDirection: 'left-to-right',
+        effects: [
+            {
+                on: 'hover',
+                style: {
+                    itemTextColor: '#000',
+                    itemBackground: '#f7fafb'
+                }
+            }
+        ]
+    }
     return (
         <ResponsiveWaffle
             data={chartData}
-            width={500}
-            height={500}
             rows={10}
             columns={10}
             padding={1}

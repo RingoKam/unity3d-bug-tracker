@@ -37,8 +37,6 @@ const WaffleGraph = ({data}) => {
   
     return (
         <ResponsiveSunburst
-            width={500}
-            height={500}
             borderWidth={1}
             colors={{ datum: 'color' }}
             childColor="noinherit"

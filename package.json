@@ -18,6 +18,8 @@
     "@vx/scale": "^0.0.182",
     "@vx/shape": "^0.0.184",
     "@vx/tooltip": "^0.0.184",
+    "ag-grid-community": "^21.2.2",
+    "ag-grid-react": "^21.2.2",
     "d3": "^5.9.1",
     "d3-hierarchy": "^1.1.8",
     "d3-scale": "^2.2.2",
