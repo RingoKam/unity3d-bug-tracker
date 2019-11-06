@@ -9,7 +9,7 @@ const TopBar = ({ title, children }) => {
                 {children}
             </nav>
             <nav className={"TopBar-navRight"}>
-                <a href="">GitHub</a>
+                <a href="https://github.com/RingoKam/unity3d-bug-tracker">GitHub</a>
             </nav>
         </div>
     );

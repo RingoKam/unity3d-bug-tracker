@@ -1,50 +1,83 @@
-import React from "react"
-import { ResponsiveSunburst } from '@nivo/sunburst';
-import { limitStringLength } from "../helpers/data-format";
+import React from "react";
+import { ResponsiveSunburst } from "@nivo/sunburst";
+import { Card, Pane, majorScale, minorScale, Heading } from "evergreen-ui";
+import Grid from "../components/grid";
 import { groupBy, uniq } from "lodash";
 
-const WaffleGraph = ({data}) => {
-    
-    // group by 
+const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
+    // group by
     const groupedByCategory = groupBy(data, "category");
     const total = data.length;
-    //loop thru the grouped data, find out whats the 
+    //loop thru the grouped data, find out whats the
     //1st child color w/ status -> category w/\
-    const children = Object.keys(groupedByCategory).map(category => {
-        const rows = groupedByCategory[category];
-        const groupedByColorType = groupBy(rows, "colorType");
-        const children = Object.keys(groupedByColorType).map(colorType => {
-            const { color } = groupedByColorType[colorType][0];
+    const children = Object.keys(groupedByCategory)
+        .map(category => {
+            const rows = groupedByCategory[category];
+            const groupedByColorType = groupBy(rows, "colorType");
+            const children = Object.keys(groupedByColorType)
+                .map(colorType => {
+                    const { color, status } = groupedByColorType[colorType][0];
+                    return {
+                        name: status,
+                        color: color,
+                        value: groupedByColorType[colorType].length
+                    };
+                })
+                .sort((a, b) => a.value - b.value);
             return {
                 name: category,
-                color: color,
-                value: groupedByColorType[colorType].length 
-            }
-        }).sort((a,b) => a.value - b.value);
-        return {
-            name: category, 
-            color: "orange",
-            children
-        }  
-    }).sort((a,b) => a.children.length - b.children.length );
+                color: "orange",
+                children
+            };
+        })
+        .sort((a, b) => a.children.length - b.children.length);
 
     const chartData = {
-        "name": "unity sun burst",
+        name: "unity sunburst",
         children
-    }
+    };
 
-  
+    const gridData = data
+
+    const wh = isDesktop
+        ? { width: 500, height: 500 }
+        : isTablet
+        ? { width: 500, height: 500 }
+        : { width: 250, height: 500 };
+
     return (
-        <ResponsiveSunburst
-            borderWidth={1}
-            colors={{ datum: 'color' }}
-            childColor="noinherit"
-            value={'value'}
-            identity={'name'}
-            animate={true} 
-            data={chartData}>
-        </ResponsiveSunburst>
-    )
-}
+        <Pane
+            textAlign="start"
+            background="white"
+            border="muted"
+            elevation={2}
+            width={1018}
+            display="flex"
+            flexDirection="column"
+            marginX={majorScale(1)}
+            marginY={majorScale(1)}
+            paddingX={majorScale(1)}
+            paddingY={majorScale(1)}
+        >
+            <Heading display="box" size={700} marginBottom={majorScale(3)}>Issue Categories Composition</Heading>
+            <Pane display="flex" flexDirection="row">
+                <Card {...wh}>
+                    <ResponsiveSunburst
+                        borderWidth={1}
+                        colors={{ datum: "color" }}
+                        childColor="noinherit"
+                        value={"value"}
+                        identity={"name"}
+                        animate={true}
+                        data={chartData}
+                    ></ResponsiveSunburst>
+                </Card>
+                <Card width={wh.width}>
+                    <Grid data={gridData}></Grid>
+                </Card>
+            </Pane>
+        </Pane>
+    );
+};
 
-export default WaffleGraph
+export default WaffleGraph;

@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
     render={data => (
         <div
           style={{
-            height: "100vh",
+            minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
