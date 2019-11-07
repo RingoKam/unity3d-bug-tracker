@@ -2,21 +2,21 @@ import React from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-
-const grid = ({ data, height }) => {
+const grid = ({ data, height, columns }) => {
 
     let gridColumnDefs = [];
     
-    if(data.length > 0) {
-        const columns = Object.keys(data[0]);
-        gridColumnDefs = columns.map(col => ({ headerName: toTitleCase(col), field: col, sortable: true, filter: true }));
+    if(columns) {
+        gridColumnDefs = columns.map(col => ({ ...col, sortable: true, filter: true }));
+    } else {
+        const cols = Object.keys(data[0]);
+        gridColumnDefs = cols.map(col => ({ headerName: toTitleCase(col), field: col, sortable: true, filter: true }));
     }
 
     const gridData = {
         columnDefs: gridColumnDefs,
         rowData: data
     }
-
 
     function toTitleCase(str) {
         return str.replace(

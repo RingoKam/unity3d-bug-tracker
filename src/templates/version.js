@@ -21,7 +21,7 @@ import TopBar from "../components/top-bar";
 import Grid from "../components/grid";
 import Header from "../components/header";
 
-const SecondPage = d => {
+const version = d => {
     const title = d["*"];
     const { data, releaseDate, releaseUrl } = d.pageContext;
     //Get a list of unqiue category, allow user to select what category they care about...
@@ -108,10 +108,12 @@ const SecondPage = d => {
                         textAlign="start"
                         paddingX={majorScale(2)}
                         paddingY={majorScale(2)}
-                        height={500}
                     >
                         <Heading size={700}>Raw Data</Heading>
-                        <Grid data={filteredDataWithColor}></Grid>
+                        <Card height={500}>
+                            <Grid data={filteredDataWithColor}>
+                            </Grid>
+                        </Card>
                     </Card>
                 </Pane>
             </Pane>
@@ -124,4 +126,4 @@ const SecondPage = d => {
     );
 };
 
-export default SecondPage;
+export default version;

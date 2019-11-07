@@ -3,6 +3,8 @@ import { ResponsiveSunburst } from "@nivo/sunburst";
 import { Card, Pane, majorScale, minorScale, Heading } from "evergreen-ui";
 import Grid from "../components/grid";
 import { groupBy, uniq } from "lodash";
+//#1E3852 use this as  background color
+
 
 const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
     // group by
