@@ -64,6 +64,7 @@ const version = d => {
 
     return (
         <Layout>
+            <Pane width={"100%"}>
             <SEO title={title} />
             <TopBar title={"Unity Ver. " + title}>
                 <a href={releaseUrl}>Offical Release Notes</a>
@@ -107,15 +108,14 @@ const version = d => {
                         data={filteredDataWithColor}
                     />
                 </Pane>
-                <Pane>
-                    <Card
-                        elevation={2}
-                        background="white"
-                        textAlign="start"
-                        paddingX={majorScale(2)}
-                        paddingY={majorScale(2)}
-                    >
-                        <Heading size={700}>Raw Data</Heading>
+                <Pane
+                 elevation={2}
+                 background="white"
+                 textAlign="start"
+                 paddingX={majorScale(2)}
+                 paddingY={majorScale(2)}>
+                    <Card>
+                        <Heading size={700} marginBottom={majorScale(3)}>Raw Data</Heading>
                         <Card height={500}>
                             <Grid data={filteredDataWithColor}>
                             </Grid>
@@ -128,6 +128,7 @@ const version = d => {
             {/* <VersionTable data={data} height={250}/> */}
             {/* <Heatmap rows={data}/> */}
             {/* <Radar rows={data} /> */}
+            </Pane>
         </Layout>
     );
 };
