@@ -34,7 +34,6 @@ export function getColorType(state) {
     return color === undefined ? defaultConfig.Duplicate : color; 
 }
 
-
 export const colorPalette = {
     red : "#EC4C47",
     green : "#47B881",

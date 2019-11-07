@@ -19,14 +19,17 @@ import WaffleGraph from "../components/waffle-graph";
 import SunBurstGraph from "../components/sun-burst-graph";
 import TopBar from "../components/top-bar";
 import Grid from "../components/grid";
-import Header from "../components/header";
 
 const version = d => {
     const title = d["*"];
-    const { data, releaseDate, releaseUrl } = d.pageContext;
+    const { data, releaseDate, releaseUrl, status, category } = d.pageContext;
     //Get a list of unqiue category, allow user to select what category they care about...
+
+    const color = status.reduce((acc, cur) => { acc[cur] = defaultConfig[cur] || "neutral"; return acc; }, {});
+
     const initalState = Object.keys(groupBy(data, "category"));
     const availableColor = Object.keys(colorPalette);
+    debugger;
 
     const [categories, setcategories] = useState(initalState);
     const [colorConfig, setColorConfig] = useState(defaultConfig);
@@ -46,6 +49,8 @@ const version = d => {
         a[c] = true;
         return a;
     }, {});
+
+
     const filteredData = data.filter(d => categoriesDict[d.category]);
     const filteredDataWithColor = filteredData.map(row => {
         const colorType = colorConfig[row.status];
@@ -63,7 +68,7 @@ const version = d => {
             <TopBar title={"Unity Ver. " + title}>
                 <a href={releaseUrl}>Offical Release Notes</a>
             </TopBar>
-            <Pane 
+            <Pane
                 width={1024}
                 margin="auto">
                 <Pane
@@ -98,6 +103,7 @@ const version = d => {
                     ></WaffleGraph>
                     <SunBurstGraph
                         {...mediaQuery}
+                        status={status}
                         data={filteredDataWithColor}
                     />
                 </Pane>

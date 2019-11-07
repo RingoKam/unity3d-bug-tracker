@@ -51,6 +51,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
         const nodes = result.data.allDataJson.edges.map(n => n.node);
         const versions = result.data.allVersionJson.edges.map(n => n.node);
+        const status = _.uniq(nodes.map(node => node.status));
+        const category = _.uniq(nodes.map(node => node.category));
 
         const mergedNodes = nodes.map(node => {
           const mainVersion = versions.find(ver => node.version.includes(ver.title));
@@ -75,6 +77,8 @@ exports.createPages = ({ graphql, actions }) => {
               data: groupedByVersion[ver],
               releaseDate: groupedByVersion[ver][0].releaseDate,
               releaseUrl: groupedByVersion[ver][0].releaseUrl,
+              status,
+              category
             },
           })
         })

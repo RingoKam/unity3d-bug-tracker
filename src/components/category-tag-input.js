@@ -19,6 +19,12 @@ const CategoryTagInput = ({ categories, selectable, setcategories }) => {
         setcategories(newCategories);
     }
 
+    const deselect = ({label, value}) => {
+        const index = categories.findIndex(c => c === label)
+        const newCategories = [...categories.slice(0, index), ...categories.slice(index + 1)];
+        setcategories(newCategories);
+    }
+
     const customTile = ({ close, title, headerHeight }) => {
         const isSelectAll = !categories.length > 0;
         const text = isSelectAll ? "Select All" : "Clear";
@@ -45,6 +51,7 @@ const CategoryTagInput = ({ categories, selectable, setcategories }) => {
             options={availableCategories}
             titleView={customTile}
             selected={categories}
+            onDeselect={deselect}
             onSelect={selectFilter}
         >
             <Button><Pill margin={8} color="purple" isSolid>{categories.length}</Pill> Bug Categories</Button>

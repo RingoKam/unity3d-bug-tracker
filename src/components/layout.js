@@ -28,12 +28,14 @@ const Layout = ({ children }) => (
           >
           {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
           <main style={{
-            flex: "1 0 auto"
+            flex: "1 0 auto",
+            display: "flex"
           }}>
             {children}
           </main>
           <footer style={{
-            flexShrink: 0
+            flexShrink: 0,
+            marginTop: "1rem"
           }}>
             © {new Date().getFullYear()}, Built with ❤
             {` `}

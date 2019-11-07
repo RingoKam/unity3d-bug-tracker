@@ -5,8 +5,7 @@ import Grid from "../components/grid";
 import { groupBy, uniq } from "lodash";
 //#1E3852 use this as  background color
 
-
-const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
+const WaffleGraph = ({ data, isDesktop, isTablet, isMobile, status }) => {
     // group by
     const groupedByCategory = groupBy(data, "category");
     const total = data.length;
@@ -39,7 +38,22 @@ const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
         children
     };
 
-    const gridData = data
+    const gridData = children.map(child => {
+        const { name, children } = child; 
+        const grandChildrenProps = children.reduce((acc, grandChild) => {
+            acc[grandChild.name] = grandChild.value; 
+            return acc;
+        }, {});
+        return {
+            name, 
+            ...grandChildrenProps
+        }
+    });
+
+    const gridCols = [
+        { field: "name", headerName: "Category", sortable: true, filter: true, pinned: "left", suppressSizeToFit: true },
+        ...status.map(s => ({ field: s, headerName: s, sortable: true, filter: true }))
+    ]
 
     const wh = isDesktop
         ? { width: 500, height: 500 }
@@ -74,8 +88,8 @@ const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
                         data={chartData}
                     ></ResponsiveSunburst>
                 </Card>
-                <Card width={wh.width}>
-                    <Grid data={gridData}></Grid>
+                <Card width={wh.width} marginLeft={majorScale(2)}>
+                    <Grid data={gridData} columns={gridCols}></Grid>
                 </Card>
             </Pane>
         </Pane>

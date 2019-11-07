@@ -12,7 +12,7 @@ const IndexPage = () => {
     }
     return (
         <Layout>
-            <Pane marginX={majorScale(2)} marginY={majorScale(2)} background={"white"} height="calc(100% - 16px)">
+            <Pane marginX={majorScale(2)} marginTop={majorScale(2)} background={"white"} flex="1 1 auto">
                 <SEO
                     title="Home"
                     keywords={[`unity`, `unity3d`, `bug`, `issue tracker`]}

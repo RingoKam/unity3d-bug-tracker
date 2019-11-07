@@ -5,6 +5,13 @@ import { ResponsiveWaffle } from "@nivo/waffle";
 import { groupBy, uniq } from "lodash";
 import { limitStringLength } from "../helpers/data-format";
 
+const gridCols = [
+   { field: "label", headerName: "Status", sortable: true, filter: true },
+   { field: "count", headerName: "Issues Count", sortable: true, filter: true },
+   { field: "value", headerName: "Percentage (%)", sortable: true, filter: true },
+   { field: "color", headerName: "Color Code", sortable: true, filter: true }
+]
+
 const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
     const groupByColor = groupBy(data, "color");
     const chartData = Object.keys(groupByColor)
@@ -58,7 +65,7 @@ const WaffleGraph = ({ data, isDesktop, isTablet, isMobile }) => {
                 ></ResponsiveWaffle>
             </Card>
             <Card width={wh.width} height={200}>
-                <Grid data={chartData}></Grid>
+                <Grid data={chartData} columns={gridCols}></Grid>
             </Card>
         </Pane>
     );
