@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { getColorType, getColor } from "../get-color";
 import { groupBy } from "lodash";
 import StatusBadge from "../components/status-badge";
+import { limitStringLength } from "../helpers/data-format" 
+import { Object } from "core-js";
 
 const HeaderStatusBar = ({ data }) => {
-
     const totalIssue = data.length;
     const grouped = groupBy(data, "status");
     const statuses = Object.keys(grouped);
     const final = statuses.map(status => {
-        const percent = (grouped[status].length / totalIssue) * 100;
+        const percent = limitStringLength((grouped[status].length / totalIssue) * 100, 0);
         const color = getColor(getColorType(status));
         return {
             status,
@@ -18,12 +19,15 @@ const HeaderStatusBar = ({ data }) => {
             style: {
                 'width': percent + "%",
                 'backgroundColor': color,
-                'height': "8px",
+                'height': "25px",
+                'text-align': "center",
                 'overflow': "hidden",
+                'color': "white",
+                'font-size': "20px"
             }
         }
-    });
-    
+    }).sort((a, b) => a.color > b.color);
+
     const HeaderStatusBarStyle = {
         width: '100%'
     }
@@ -43,13 +47,7 @@ const HeaderStatusBar = ({ data }) => {
         border: "none",
         cursor: "pointer"
     }
-
-    const getColorSpan = () => {
-        return final.map(f => {
-            return (<span key={f.status} title={f.status} style={f.style}></span>)
-        })
-    }
-
+    
     const getColorHeaderItem = () => {
         return final.map(f => {
             const style = {
@@ -57,7 +55,7 @@ const HeaderStatusBar = ({ data }) => {
             };
             const percent = ("" + f.percent).substring(0, 4);
             return (<div style={style}>
-                {StatusBadge(f.status, " " + percent + "%" )}
+                {StatusBadge(f.status, " " + percent + "%")}
             </div>)
         })
     }
@@ -67,9 +65,6 @@ const HeaderStatusBar = ({ data }) => {
         <div style={HeaderStatusBarBoxStyle}>
             {getColorHeaderItem()}
         </div>
-        <button style={HeaderStatusBarButtonStyle} type="button">
-            {getColorSpan()}
-        </button>
     </div>);
 };
 

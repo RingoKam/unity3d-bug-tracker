@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@nivo/sunburst": "^0.59.1",
+    "@nivo/waffle": "^0.59.1",
     "@vx/axis": "^0.0.184",
     "@vx/event": "^0.0.182",
     "@vx/gradient": "0.0.183",
@@ -16,6 +18,8 @@
     "@vx/scale": "^0.0.182",
     "@vx/shape": "^0.0.184",
     "@vx/tooltip": "^0.0.184",
+    "ag-grid-community": "^21.2.2",
+    "ag-grid-react": "^21.2.2",
     "d3": "^5.9.1",
     "d3-hierarchy": "^1.1.8",
     "d3-scale": "^2.2.2",
@@ -33,7 +37,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.8.0",
+    "react-responsive": "^8.0.1"
   },
   "keywords": [
     "gatsby"
