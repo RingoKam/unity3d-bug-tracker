@@ -70,7 +70,7 @@ const version = d => {
                 <a href={releaseUrl}>Offical Release Notes</a>
             </TopBar>
             <Pane
-                width={1024}
+                width={"100%"}
                 margin="auto">
                 <Pane
                     display={"flex"}
@@ -96,7 +96,7 @@ const version = d => {
                 <Pane
                     display={"flex"}
                     flexWrap={"wrap"}
-                    justifyContent={"space-evenly"}
+                    justifyContent={"center"}
                 >
                     <WaffleGraph
                         {...mediaQuery}
