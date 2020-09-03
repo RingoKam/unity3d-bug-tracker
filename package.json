@@ -64,6 +64,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
-    "puppeteer": "^1.12.2"
+    "puppeteer": "^1.13.0"
   }
 }
